@@ -1,0 +1,7 @@
+﻿problem_pattern,design_solution,use_when,framework_elements,kpi_id,metric_name,method,target_value
+Pattern of the problem identified in Phase 2,The proposed design approach,Specific conditions for selecting this solution,Mandatory components of the design,,,,
+No system exists,Build from scratch,Greenfield / cold start,create new protocol,,,,
+System exists but broken,Refactor,Has good parts worth saving,restructure while keeping what works,,,,
+System works but slow,Optimize,"Performance issue, not design issue","find bottleneck, improve throughput",,,,
+Multiple conflicting systems,Merge,"Role conflict, scattered efforts",unify into single coherent system,,,,
+System too complex,Simplify,"Over-engineered, maintenance burden",remove unnecessary components,,,,

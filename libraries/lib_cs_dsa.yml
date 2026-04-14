@@ -1,0 +1,87 @@
+copyright: PDES™ by TrinhDucThanh.com © All rights reserved.
+# PDES SKILL_ALGO: CS_DSA
+framework:
+  skill_id: lib_cs_dsa
+  version: v26.0412
+  tier: library
+
+anchors:
+  self:
+    index: "libraries/lib_cs_dsa.md"
+    logic: "libraries/lib_cs_dsa.yml"
+    schema: "libraries/lib_cs_dsa.json"
+    data: "libraries/lib_cs_dsa.csv"
+
+# 1. TIME COMPLEXITY (Efficiency Metrics)
+time_complexity:
+  arrays:
+    access: "O(1)"
+    search: "O(n)"
+    insertion: "O(n)"
+  linked_lists:
+    access: "O(n)"
+    insertion: "O(1)"
+  hash_tables:
+    search: "O(1)" # Average case
+    insertion: "O(1)"
+  binary_search_tree:
+    search: "O(log n)"
+    insertion: "O(log n)"
+    worst_case: "O(n)" # Unbalanced
+
+# 2. SPACE COMPLEXITY (Mental Load / Memory Overhead)
+# In PDES, Space Complexity = Mental bandwidth required to maintain the structure.
+space_complexity:
+  arrays: "O(n)"
+  linked_lists: "O(n)"
+  hash_tables: "O(n)"
+  recursion_depth: "O(n)" # Risk of Stack Overflow
+  sorting_inplace: "O(1)" # Bubble, Quick (avg)
+  sorting_auxiliary: "O(n)" # Merge sort
+
+# 3. SYSTEM CONSTRAINTS & LIMITS (Operational Rules)
+constraints:
+  recursion:
+    max_depth_threshold: 50 # Prevent mental burnout/infinite loops
+    base_case_required: true
+  binary_search:
+    pre_requisite: "sorted_data"
+  array:
+    access_speed: "instant"
+    resizing_cost: "high"
+
+# 4. ALGORITHMIC SIGNATURES (Pattern Recognition)
+# Logic to identify which DSA to apply based on PDES Bug symptoms.
+signatures:
+  - id: "SIG_001"
+    pattern: "Repeatedly doing the same sub-task"
+    symptom: "Redundant effort / Mental fatigue"
+    recommended_algo: "Dynamic Programming"
+    strategy: "Memoization"
+    logic_ref: "lib_cs_dsa.md#3"
+    
+  - id: "SIG_002"
+    pattern: "Information coming from multiple sources at different speeds"
+    symptom: "Priority inversion / Chaos in G9"
+    recommended_structure: "Priority Queue"
+    strategy: "Heap-based sorting"
+    logic_ref: "lib_cs_dsa.md#1.4"
+
+  - id: "SIG_003"
+    pattern: "Need to find a specific item in a large, ordered dataset"
+    symptom: "Linear scanning takes too long"
+    recommended_algo: "Binary Search"
+    strategy: "Divide and Conquer"
+    logic_ref: "lib_cs_dsa.md#3"
+
+# 5. SORTING & GRAPH PERFORMANCE
+efficiency_matrix:
+  sorting:
+    bubble: "O(n^2)"
+    merge: "O(n log n)"
+    quick_avg: "O(n log n)"
+    quick_worst: "O(n^2)"
+  graphs:
+    bfs: "O(V + E)"
+    dfs: "O(V + E)"
+    dijkstra: "O(E log V)"

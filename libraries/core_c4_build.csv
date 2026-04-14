@@ -1,0 +1,8 @@
+﻿ladder,implementation_type,environment_setup,build_steps,verification_method,ladder_desc,kpi_id,metric_name,method,target_value
+desc,Type of implementation,Preparation required,Daily Action Logic,Verification Method,Human Description,,,,
+L0,Manual Implementation,Clear workspace; Manual tools,Do it by hand; Learn the motion,100% manual success,"do it by hand, learn the motion",,,,
+L1,Checklist System,Write protocol; Paper/Digital list,Follow the list strictly; Mark each step,Checklist completion,"write it down, follow the list",,,,
+L2,Template Standardization,Design standard format,Standardize inputs/outputs; Copy-paste flow,Format consistency,standardize the format,,,,
+L3,Routine & Stacking,Identify anchor habits,Attach new to existing; Habit stacking,Trigger success rate,attach to existing habit (habit stacking),,,,
+L4,Semi-Automated,Tool configuration,Use automation tools to reduce friction,Friction/Effort reduction,use tools to reduce friction,,,,
+L5,Fully Automated,System integration,Zero-human-input setup; Scripts/Apps,System autonomy,system runs with minimal input,,,,

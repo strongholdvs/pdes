@@ -1,0 +1,51 @@
+{
+	"copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+	"matrix_id": "PDES_32_LEVEL_MATRIX",
+	"schema_version": "v26.0412",
+	"system_anchors": {
+		"self": {
+			"index": "libraries/lib_lvl.md",
+			"logic": "libraries/lib_lvl.yml",
+			"schema": "libraries/lib_lvl.json",
+			"data": "libraries/lib_lvl_pdes.csv"
+		},
+		"deps": {
+			"lvl_pdes": "libraries/lib_lvl_pdes.csv",
+			"lvl_tuchan": "libraries/lib_lvl_tuchan_cultivate.csv",
+			"lvl_finance": "libraries/lib_lvl_finance.csv"
+		}
+	},
+	"lvl_Grid_template": {
+		"mapping_id": {
+			"realm_1": "array",
+			"stage_1": "array",
+			"factorial_1": "array",
+			"grid_desc": "array"
+		},
+		"metric_num": {
+			"input_1": "number",
+			"process_1": "number",
+			"output_1": "number"
+		},
+		"kpi_grid_template": {
+			"current_G": "string",
+			"kpi_id": "string",
+			"skill_ref": "string",
+			"metric_name": "string",
+			"target_value": "string",
+			"method": "string",
+			"category": "string"
+		},
+		"extra_context": {
+			"factorial_2": "string",
+			"factorial_3": "string",
+			"factorial_4": "string",
+			"factorial_5": "string",
+			"realm_2": "string",
+			"stage_2": "string",
+			"input_2": "string",
+			"input_3": "string",
+			"output_2": "string"
+		}
+	}
+}

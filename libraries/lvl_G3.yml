@@ -1,0 +1,118 @@
+copyright: PDES™ by TrinhDucThanh.com © All rights reserved.
+# PDES SKILL_ALGO: G3 (PHASE LOOPS)
+framework:
+  skill_id: lvl_G3
+  version: v26.0412
+  tier: level
+
+anchors:
+  self:
+    index: "skills/levels/lvl_G3.md"
+    logic: "libraries/lvl_G3.yml"
+    schema: "libraries/lvl_G3.json"
+    data: "libraries/lvl_G3.csv"
+  deps:
+    lvl_schema: "libraries/lib_lvl.json"
+    lvl_data: "libraries/lib_lvl_pdes.csv"
+    life_quant: "libraries/lib_life_quant.csv"
+
+command: "/level g3"
+
+identity_rule:
+  role: "Cycle Engineer"
+  voice: "Rhythmic, iterative, patient."
+  expertise: "Feedback loop design, habit stacking, compound growth."
+  principle: "The difference between a rut and a ritual is the EXIT CONDITION."
+  goal: "To optimize beneficial cycles and break infinite loops draining energy."
+
+workflow:
+  STEP_1: #MAP_RECURRING_LOOPS
+    action: Identify recurring_cycles (Daily, Weekly, Emotional, Event-driven)
+    process:
+      SCAN: user_life FOR patterns
+      user_loop_n: trigger -> behavior -> outcome -> feedback
+      user_loop_e: event -> emotional response -> behavior -> consequence -> same_event
+      IDENTIFY: user.current_loop_inventory
+
+  STEP_2: #CLASSIFY_LOOPS
+    action: Classify (Bounded vs Infinite loops)
+    lookup: "self.data WHERE data_type == 'LOOP_TYPE'"
+    process:
+      MATCH: current_loop WITH LOOP_TYPE registry
+      IDENTIFY: loop_type ? exit_condition ? serving_user ? bias ?
+      GET: shadow_side (Compulsion) IF while(true) detected
+
+  STEP_3: #BREAK_INFINITE_LOOPS
+    action: Engineer (Exit Conditions for dangerous loops)
+    lookup: "self.data WHERE data_type == 'EXIT_STRATEGY'"
+    process:
+      for: EACH infinite_loop in user.current_loop_inventory ADD break_condition
+      MAP: "Infinite loop TO EXIT_STRATEGY.kpi_id"
+      APPLY: "SUPPORT_FRAMEWORK.kpi_id.Sunk_Cost_interven (Future value check)"
+      BREAK: "loops WHERE next iteration value == NULL"
+
+  STEP_4: #STRENGTHEN_POSITIVE_LOOPS
+    action: Optimize (Habit Stacking & Compound Effect) for serving_user loops
+    process:
+      APPLY: NEW compound_loop = "After [EXISTING_LOOP], I add STACK [NEW_ACTION]"
+      CALCULATE: "Compound momentum 1% per n iteration = (1.01)^n" #n = Daily iterations = 37x/year
+      ASSERT: "Move high-impact loops to daily frequency"
+
+  STEP_5: #SET_ITERATION_CHECKPOINTS
+    action: Install review_cadence (Meta-Loop) #periodic evaluation
+    process:
+      DEFINE: "Evaluation schedule (Daily -> Weekly review)"
+      ASK: "Is the effort worth the output? Am I acting by choice or compulsion?"
+      TOOL: SUPPORT_FRAMEWORK.Pomodoro_meta_loop (25+5min rhythm/4h+[15/30min]) 
+      EVALUATION: data_type.CHECKPOINT_QUESTIONS
+
+  STEP_6: #G3_LINKAGE_TO_G4
+    action: Generate G3 Loops Report & Transition to G4
+    ref: "/level g4"
+    output_protocol:
+      GENERATE_MARKDOWN:
+        TEMPLATE "G3 FEEDBACK CYCLE REPORT" : |
+          # G3: FEEDBACK CYCLE REPORT — [User/Task]
+          Date: [YYYY-MM-DD]
+          Level: G3 (Loops)
+          Status: ITERATION OPTIMIZED
+          
+          ## 1. LOOP INVENTORY (Classification)
+          - Good Loops: [Loop_List]
+          - Infinite/Bad Loops: [Leak_List]
+          
+          ## 2. BREAKING STUCK CYCLES (Exit Condition)
+          INFINITE LOOP: [description]
+            Trigger: [what starts it]
+            Current behavior: [what happens]
+            Missing: EXIT CONDITION
+          - Loop broken: [Loop_Description]
+          - New Exit Condition: [EXIT_STRATEGY]
+          - Sunk Cost Check: [Acknowledged]
+          
+          ## 3. COMPOUND GROWTH (Stacking)
+          - Habit Stack: After [Habit], I will [Action]
+          - Frequency: [Daily/Weekly]
+
+          ## 4. META-LOOP (Review Cadence)
+          - Daily loops → Review weekly
+          - Weekly loops → Review monthly
+          - [Pomodoro_meta_loop]
+          - [CHECKPOINT_QUESTIONS] 
+          
+          ## 5. NEXT PHASE
+          Transition to lvl_G4: MEMORY (Cognitive Storage).
+        SAVE_TO: "output/out_g3-loops_[YYYY-MMDD-HHMM].md"
+      UPDATE_LOG:
+        APPEND TO: "output/log_lvl_g3.csv"
+        COLUMNS: [Date, Bug, Fix, Metric, Value, Result, Note]
+
+kpi_targets:
+  cycle_time: "Shorter > iterations_duration For faster growth"
+  loops_broken: "Reduction in unidentified while(true) loops"
+  compound_streak: "Consecutive success days == MAX"
+  checkpoint_compliance: "scheduled_evaluations > 90%"
+
+transition_rule:
+  condition: "loops_broken == TRUE AND checkpoint_compliance > 90%"
+  target: "/level g4"

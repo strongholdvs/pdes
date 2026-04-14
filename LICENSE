@@ -1,0 +1,89 @@
+copyright: PDES™ by TrinhDucThanh.com © All rights reserved.
+PDES — Personas Development Engine System
+Author Name: Trịnh Đức Thành
+For licensing inquiries:
+[contact info]
+TrinhDucThanh.com
+stronghold@trinhducthanh.com
+1994trinhducthanh@gmail.com
+Address: 0x12b2f06f62e9ed11952af28844db8cb9d9c489a5
+
+=====================================
+FREE TIER (MIT License)
+=====================================
+
+The following files are licensed under the MIT License:
+
+- PDES_INDEX.md
+- skills/core/* (all core skills)
+- templates/tem_input/* (all templates)
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+=====================================
+PAID TIER (Proprietary)
+=====================================
+
+The following files are proprietary and require a paid license:
+
+- skills/levels/* (all levels skills)
+- skills/plugins/* (all plugin skills)
+- libraries/* (all library files)
+
+These files may NOT be copied, modified, distributed, or resold
+without explicit written permission from the author.
+
+
+=====================================
+NOTE
+=====================================
+
+The boundary between free and paid tiers may shift over time.
+This LICENSE file is the canonical source of truth for what is
+currently free vs paid. Check the latest version for updates.
+
+
+=====================================
+Add-on Option Commercial License
+EULA - End User License Agreement
+BSL - Business Source License
+GPL (GNU General Public License)
+NFR (Not for Resale)
+
+[NO] Can be edited	
+[NO] Can modify the source
+[NO] Can put your name as author
+[NO] Can claim copyright
+[NO] Can be sold	
+[NO] Can be added to paid membership
+[NO] Can be given away for free
+[NO] Can sell Resell Rights (RR)
+[NO] Can sell Master Resell Rights (MRR)
+
+CC (Creative Commons)
+BY (Attribution)
+NC (Non-Commercial)
+ND (No Derivatives)
+SA (Share Alike)
+CC BY-NC-ND
+
+Attribution: Credits to "PDES by TrinhDucThanh" must remain in source headers.

@@ -1,0 +1,26 @@
+copyright: PDES™ by TrinhDucThanh.com © All rights reserved.
+engine:
+  name: "PDES_Execution_Engine"
+  target_matrix: "PDES_32_LEVEL_MATRIX"
+
+commands:
+  # Level-based navigation logic
+  - transition:
+      from: "$G_current"
+      to: "$G_next"
+      condition: "metric_num.m_output >= Grid_template.metric_num.m_input"
+      on_fail: "STALL"
+
+# Synchronization logic between tables
+# sync_registry:
+# sync_key: "G"
+# action: "cross_reference"
+# description: "Map 1-1 Realm/Stage indices based on G's ID"
+
+  # Calculation logic (Operating formula)
+  - calculus:
+      process_type: 
+        TU_CHAN: "linear_growth"
+        FINANCE: "exponential_growth"
+        PDES: "logarithmic_efficiency"
+      formula: "m_output = m_input * m_process"

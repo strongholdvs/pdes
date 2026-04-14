@@ -1,0 +1,7 @@
+Variable,Requirement,Current_Gap,Priority,Note
+Time_Budget,60,20,High,Minutes available vs needed
+Energy_Cost,7,2,Medium,1-10 scale
+Tool_Access,Yes,No,High,Do we have the hardware?
+Success_Prob_Alpha,0.6,N/A,Critical,User's estimated probability of success
+Risk_Tolerance,Low,N/A,Medium,Can we afford a system failure?
+Switching_Cost,Medium,N/A,Low,Effort to move from old system to this new one

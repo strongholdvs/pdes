@@ -1,0 +1,6 @@
+Component,Value,Constraint_Level,Note
+State_A,80,Low,Average time spent in this state (%)
+Transition_B,20,High,Friction level (%) when moving
+Resource_C,50,Medium,Current limits remaining (%)
+BottleNeck_Check,True,N/A,Is this a known slowing point?
+Failure_Cost,High,N/A,Consequence if this component fails

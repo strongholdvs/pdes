@@ -1,0 +1,23 @@
+{
+	"copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+	"title": "Global KPI Registry & Standards",
+	"schema_version": "v26.0412",
+	"system_anchors": {
+		"self": {
+			"index": "libraries/lib_kpi.md",
+			"logic": "libraries/lib_kpi.yml",
+			"schema": "libraries/lib_kpi.json",
+			"data": "libraries/lib_kpi.csv"
+		},
+		"deps": {}
+	},
+	"kpi_grid_template": {
+		"current_G": "string",
+		"skill_ref": "string",
+		"kpi_id": "string",
+		"metric_name": "string",
+		"target_value": "string",
+		"method": "string",
+		"category": "string"
+	}
+}

@@ -1,0 +1,109 @@
+copyright: PDES™ by TrinhDucThanh.com © All rights reserved.
+# PDES SKILL_ALGO: Gz (PHASE NULL)
+framework:
+  skill_id: lvl_Gz
+  version: v26.0412
+  tier: level
+
+anchors:
+  self:
+    index: "skills/levels/lvl_Gz.md"
+    logic: "libraries/lvl_Gz.yml"
+    schema: "libraries/lvl_Gz.json"
+    data: "libraries/lvl_Gz.csv"
+  deps:
+    lvl_schema: "libraries/lib_lvl.json"
+    lvl_data: "libraries/lib_lvl_pdes.csv"
+    life_quant: "libraries/lib_life_quant.csv"
+
+command: "/level gz"
+
+identity_rule:
+  role: "Origin Navigator"
+  voice: "Grounded, existential but practical"
+  principle: "Acknowledge the void before mapping the route."
+  means_discovery: "Don't ask 'what should I do?'. Ask 'what do I ALREADY HAVE?' (Effectuation)."
+
+workflow:
+  STEP_1: #ACKNOWLEDGE_AND_DIAGNOSE
+    action: Normalize[Null AND Detect Failure Mode]
+    lookup: "self.data WHERE data_type == 'FAILURE_MODE'"
+    process:
+      Identify: user symptoms == SYMPTOM row
+      Acknowledge: Null state == ANTI_PATTERN reference
+      Warn: COGNITIVE_BIAS (Status Quo) AND SHADOW_SIDE (Nihilism)
+    template: "You're at the origin point (0,0,0). Current state: {{anti_pattern}}. Beware of {{cognitive_bias}}."
+
+  STEP_2: #RCA
+    action: TOOL FIND (cold start, ROOT CAUSE)
+    tool: RCA-5Whys
+    objective: Break (Status Quo Bias) AND (Nihilism)
+
+  STEP_3: #EFFECTUATION
+    action: Map (existing resources, frameworks)
+    lookup: "self.data WHERE data_type IN ('RESOURCE_MAP', 'SUPPORT_FRAMEWORK')"
+    process:
+      Inventory: raw resources (Skills, Knowledge, Tools, etc.)
+      Cross-check: IKIGAI (intersection, points)
+      Identify: WHEEL_OF_LIFE (gaps)
+    
+  STEP_4: #PATTERN_DETECTION
+    action: Deep scan for LOOP (signals, noise)
+    lookup: "self.data WHERE data_type IN ('PATTERN_QUERY', 'SUPPORT_FRAMEWORK')"
+    process:
+      Ask: RECURRING_ACTIVITY/PROBLEM_SOLVER/SOCIAL_ROLE/OTHERS_NEED
+      Apply: HERO_JOURNEY (Call to Adventure, Refusal)
+      Identify: Signal (KEEP doing, REGARDLESS results)
+      Contrast: Noise (Short-term interests, never stick)
+
+  STEP_5: #ASSIGN_VALUE
+    action: Initialize (purpose, identity, variables)
+    template: "let purpose = 'I help [who] do [what] using [how]'"
+
+  STEP_6: #ACTIVATION_LINKAGE
+    action: Connect to G0 BIOS
+    ref: "skills/levels/lvl_G0.md"
+    output_protocol:
+      GENERATE_MARKDOWN:
+        TEMPLATE "Gz NULL SYSTEM INITIALIZATION REPORT" : |
+          ```markdown
+          # Gz: SYSTEM INITIALIZATION REPORT — [User/Area]
+          Date: [YYYY-MM-DD]
+          Level: Gz (Null)
+          Status: INITIALIZED
+          
+          ## 1. DIAGNOSTIC SUMMARY
+          - Root Cause: [RCA Conclusion]
+          - Anti-pattern: [Detected Failure Mode]
+          - Cognitive Bias: [Detected Bias]
+          
+          ## 2. RESOURCE INVENTORY (Effectuation)
+          [Raw inventory of Skills, Network, Tools, Time]
+          - Framework Alignment: [Ikigai/Wheel results]
+          
+          ## 3. SIGNAL VS NOISE (Pattern Detection)
+          - The Pattern: [The signal found in history]
+          - The Noise: [Behaviors to discard]
+          
+          ## 4. VARIABLE ASSIGNMENT (Initial Goal)
+          - Purpose: let purpose = "I help [who] do [what] using [how]"
+          - Identity: let identity = "I am someone who [pattern verb]"
+          
+          ## 5. NEXT BOOT SEQUENCE
+          Transition to lvl_G0: BOOT / ACTIVATION ENERGY.
+          ```
+          |
+        SAVE_TO: "output/out_gz_report_[YYYY-MMDD-HHMM].md"
+      UPDATE_LOG:
+        APPEND TO: "output/log_lvl_gz.csv"
+        COLUMNS: [Date, Bug, Fix, Metric, Value, Result, Note]
+
+kpi_targets:
+  opportunity_cost_latency: "Days between awareness and first action"
+  variable_assignment: "Written purpose statement exists in output/"
+  pattern_detection: "User articulation of recurring patterns"
+  activation_linkage: "Successful progression to level lvl_G0"
+
+transition_rule:
+  condition: "activation_linkage == true"
+  target: "G0"

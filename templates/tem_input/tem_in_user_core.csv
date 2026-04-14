@@ -1,0 +1,17 @@
+Date,Phase,Category,Metric,Value,sub_Metric,Status,Note
+YYYY-MM-DD,user_track,Work,Deep Work Session,120,,Success,Focused on Library Build
+YYYY-MM-DD,user_track,Health,Sleep Duration,6.5,,Warning,Woke up tired
+YYYY-MM-DD,user_track,Mind,Stress Level,7,,Critical,High workload at 2PM
+YYYY-MM-DD,c1_perceive,Energy,Focus_Score/10,4,,Warning,Crashed after lunch
+YYYY-MM-DD,c1_perceive,Sleep,Duration/hr,5.5,,Critical,Interrupted sleep
+YYYY-MM-DD,c1_perceive,Nutrition,Calories/kcal,2200,,Success,Hit macro targets
+,c2_model,General,State_A,80,,Low,Average time spent in this state (%)
+,c2_model,General,Transition_B,20,,High,Friction level (%) when moving
+,c3_design,General,Time_Budget,60,120,High,Minutes available vs needed
+,c3_design,General,Energy_Cost,7,5,Medium,1-10 scale
+,c4_build,Manual,Trigger_Event,,,Low,How reliable is the start trigger (1-10)?
+,c4_build,Checklist,Step_1_Execution,,,Medium,Difficulty in performing the first move
+YYYY-MM-DD,c5_measure,General,Full,120,8,Success,Great focus
+YYYY-MM-DD,c5_measure,General,Skip,0,2,Failure,Burnout day
+,c6_optimize,General,Action_A,,9,Medium,Keep: High impact low friction
+,c6_optimize,General,Manual_Data_Entry,,2,Highest,Automate: Repetitive and boring

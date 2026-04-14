@@ -1,0 +1,41 @@
+{
+  "copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+  "title": "G1: Syntax — Behavioral Validation",
+  "schema_version": "v26.0412",
+  "tier": "level",
+  "level": "G1",
+  "system_anchors": {
+    "self": {
+      "index": "skills/levels/lvl_G1.md",
+      "logic": "libraries/lvl_G1.yml",
+      "schema": "libraries/lvl_G1.json",
+      "data": "libraries/lvl_G1.csv"
+    },
+    "deps": {
+      "lvl_schema": "libraries/lib_lvl.json",
+      "lvl_data": "libraries/lib_lvl_pdes.csv",
+      "life_quant": "libraries/lib_life_quant.csv"
+    }
+  },
+  "failure_mode_schema": {
+    "anti_pattern": "string",
+    "human_symptom": "string",
+    "shadow_side": "string",
+    "cognitive_bias": "string"
+  },
+  "kpi_grid_template": {
+    "current_G": "string",
+    "skill_ref": "string",
+    "kpi_id": "string",
+    "metric_name": "string",
+    "target_value": "string",
+    "method": "string",
+    "category": "string"
+  },
+  "g1_grid_template": {
+    "data_type": "string",
+    "kpi_id": "string",
+    "content": "string",
+    "meta_attr_1": "string"
+  }
+}

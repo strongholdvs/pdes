@@ -1,0 +1,8 @@
+﻿pattern_id,friction_type,cs_analogy,symptom,fix_pattern,refractor,before,after,kpi_id,metric_name,method,target_value
+desc,Internal ID,Type of friction,Computer Science equivalent,Human signal,Optimize,Before,After,,,,
+complexity,Too many steps,O(n^2) complexity,Feels heavy/takes long,Combine or Reduce steps,Combine,3 separate actions,1 combined action,,,,
+willpower,Depends on willpower,Hard-coded values,Fails on bad days,Add defaults & fallbacks,Default,Relies on willpower,Automatic unless user opts out,,,,
+manual,Boring/Repetitive tasks,Manual loop,User dreads the task,Automate or Eliminate,Automate,Manual repetitive task,Tool/app handles it,,,,
+timing,Wrong schedule/timing,Race condition,Conflicts with priorities/commitments,Reschedule for optimal time,Reschedule,Wrong time slot,Moved to optimal time,,,,
+ambition,Too ambitious,Buffer overflow,Frequently skipped or min ver,Scale down to energy level,Scale,Too ambitious,Right-sized to energy level,,,,
+redundancy,Useless actions,Dead code,No measurable impact,Prune and eliminate,Eliminate,Action with no measurable impact,Removed,,,,

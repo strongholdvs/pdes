@@ -1,0 +1,31 @@
+﻿data_type,kpi_id,content,meta_attr_1,metric_name,method,target_value
+Record Type,Unique Key ID,Content,Category,,Measurement Method,target_value
+CS Concept,,Syntax,,,,
+System Design. PD Concept,,Syntax Validation. Behavioral Syntax,,,,
+System Engineer Workflow,,"Error Checking, Linting",,,,
+FAILURE_MODE,ANTI_PATTERN,Syntax Error,Critical,,System Diagnostic,
+FAILURE_MODE,SYMPTOM,"Poor communication, social awkwardness, rudeness, messy habits, pattern",Human,,Symptom Observation,
+FAILURE_MODE,SHADOW,Pedantry,Psychological,,Shadow Audit,
+FAILURE_MODE,BIAS,Curse of Knowledge,Cognitive,,Bias Detection,
+\,,,,,,
+TIME_BLOCK,Morning,what actually happens,,,,
+TIME_BLOCK,Work,"behavioral code, do every day, plan vs happen",,,,
+TIME_BLOCK,Evening,good/neutral/bad,,,,
+TIME_BLOCK,Social,communication style,,,,
+\,,,,,,
+SYNTAX_ERROR,wrong_order,Statement before declaration,,Hijacks attention reactive mode,Checking phone before routine,
+SYNTAX_ERROR,missing_delimiter,No clear boundaries,,Bleed-over never fully resting,No separation work/rest,
+SYNTAX_ERROR,typo_pattern,Misspelled expression,,Triggers defense not resolution,"Saying ""You always...""",
+SYNTAX_ERROR,redundant_code,Duplicate logic,,Wastes cognitive resources,Checking email 20x/day,
+SYNTAX_ERROR,missing_exception,No error handling. No try/catch,,One bad day full System crash,No plan for when habits break,
+\,,,,,,
+SUPPORT_FRAMEWORK,ATOMIC_HABITS,Cue -> Routine -> Reward,Correction,,Framework Audit,
+SUPPORT_FRAMEWORK,Non_Violent_Comm,Obs / Feel / Need / Req,Comm Fix,,Framework Audit,
+SUPPORT_FRAMEWORK,Goal_Directed_Self_Talk,,,,,
+SUPPORT_FRAMEWORK,DAILY_LINT,2-min review,Self-Audit,,Framework Audit,
+\,,,,,,
+OMTM,G1_NSM_SNR,,,Signal Noise Ratio,% Daily Signal vs Noise,> 60%
+KPI,G1_TradeOFF_Signal,,,Signal Precision,,
+KPI,ERR_REDUCE,,,Error Reduction,Count fixed errors,> 3/week
+KPI,PAT_CONSIST,,,Pattern Consistency,Consecutive days,> 5 days
+KPI,COMM_CLARITY,,,Comm Clarity,Fewer misunderstandings,Qualitative

@@ -1,0 +1,61 @@
+{
+	"copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+	"title": "Design — Phase 3: Framework & Strategy",
+	"schema_version": "v26.0412",
+	"phase": 3,
+	"system_anchors": {
+		"self": {
+			"index": "skills/core/core_c3_design.md",
+			"logic": "libraries/core_c3_design.yml",
+			"schema": "libraries/core_c3_design.json",
+			"data": "libraries/core_c3_design.csv"
+		},
+		"deps": {
+			"lvl_schema": "libraries/lib_lvl.json",
+			"lvl_pdes": "libraries/lib_lvl_pdes.csv",
+			"life_quant": "libraries/lib_life_quant.csv",
+			"c2_model": "libraries/core_c2_model.json"
+		}
+	},
+	"c3_grid_template": {
+		"design_map": {
+			"problem_pattern": "array",
+			"design_solution": "array",
+			"use_when": "array",
+			"framework_elements": "array"
+		}
+	},
+	"kpi_grid_template": {
+		"current_G": "string",
+		"kpi_id": "string",
+		"metric_name": "string",
+		"target_value": "string",
+		"method": "string",
+		"skill_ref": "string",
+		"category": "string"
+	},
+	"c3_constraints": {
+		"G": "string",
+		"area": "string",
+		"limits": {
+			"time": "string",
+			"energy": "number",
+			"resources": "array",
+			"non_negotiables": "array",
+			"dependencies": "array"
+		}
+	},
+	"c3_framework": {
+		"protocol": "array",
+		"triggers": "array",
+		"defaults": "array",
+		"escape_hatches": "array",
+		"minimum_viable": "string"
+	},
+	"c3_tradeoff": {
+		"choice": "string",
+		"gain_benefit": "string",
+		"cost_sacrifice": "string",
+		"dp_da": "number"
+	}
+}

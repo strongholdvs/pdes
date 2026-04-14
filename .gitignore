@@ -1,0 +1,20 @@
+# User data — not tracked
+output/out_*
+output/log_session.md
+output/log_history/*.md
+input/*
+!input/.gitkeep
+
+# Keep directory structure
+!output/log_history/.gitkeep
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Editors
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

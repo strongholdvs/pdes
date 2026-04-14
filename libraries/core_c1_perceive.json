@@ -1,0 +1,50 @@
+{
+	"copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+	"title": "Perceive — Phase 1: Input & Awareness",
+	"schema_version": "v26.0412",
+	"phase": 1,
+	"system_anchors": {
+		"self": {
+			"index": "skills/core/core_c1_perceive.md",
+			"logic": "libraries/core_c1_perceive.yml",
+			"schema": "libraries/core_c1_perceive.json",
+			"data": "libraries/core_c1_perceive.csv"
+		},
+		"deps": {
+			"lvl_schema": "libraries/lib_lvl.json",
+			"life_quant": "libraries/lib_life_quant.csv"
+		}
+	},
+	"c1_grid_template": {
+		"state_map": {
+			"cs_concept": "string",
+			"symptom": "array",
+			"fail_mode": "string",
+			"shadow_side": "array",
+			"cognitive_bias": "array"
+		}
+	},
+	"kpi_grid_template": {
+		"current_G": "string",
+		"kpi_id": "string",
+		"metric_name": "string",
+		"target_value": "string",
+		"method": "string",
+		"skill_ref": "string",
+		"category": "string"
+	},
+	"c1_area": {
+		"area": "string",
+		"boundary": {
+			"inside": "array",
+			"outside": "array",
+			"cs_analogy": "string"
+		},
+		"map": {
+			"input": "array",
+			"process": "array",
+			"output": "array",
+			"feedback": "array"
+		}
+	}
+}

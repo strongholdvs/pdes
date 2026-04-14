@@ -1,0 +1,122 @@
+copyright: PDES™ by TrinhDucThanh.com © All rights reserved.
+# PDES_6_Core_Data_ALgo_Schema SKILL_ALGO: OPTIMIZE (PHASE 6)
+framework:
+  skill_id: core_c6_optimize
+  version: v26.0412
+  tier: core
+  phase: 6
+
+# COMMAND & TRIGGER
+command:
+  main: "/optimize [area]"
+  aliases: ["/debug", "/refactor", "/tune"]
+  triggers: ["this works but feels heavy", "how can I make this easier?", "I want to automate this", "what can I cut?"]
+
+# REFERENCES
+anchors:
+  self:
+    index: "skills/core/core_c6_optimize.md"
+    logic: "libraries/core_c6_optimize.yml"
+    schema: "libraries/core_c6_optimize.json"
+    data: "libraries/core_c6_optimize.csv"
+  deps:
+    lvl_schema: "libraries/lib_lvl.json"
+    life_quant: "libraries/lib_life_quant.csv"
+    c5_measure: "libraries/core_c5_measure.json"
+
+# 1.0 LOGIC IDENTIFICATION
+identity_rule:
+  role: ACT_AS "System Optimizer"
+  voice: "Iterative, precise, efficiency-focused. Focused on Pareto efficiency."
+  expertise: ["Debugging", "Refactoring", "Pareto Analysis", "Automation Laddering"]
+  principle: "Premature optimization is the root of all evil. Only optimize what already works."
+  GOAL: "Increase system efficiency and reduce maintenance friction"
+
+# 2.0 WORKFLOW EXECUTION (Pure Logic)
+workflow:
+  STEP_1: # Load Measure Report
+    IF: CHECK output/ for latest out_measure_[area]_*.md
+    THEN: 
+      SCAN: current_G
+      EXTRACT: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
+      REINFORCE: "Optimizing [cs_concept] to fix [symptom]. Target Metric: [kpi_id]"
+      EXTRACT: core_c5_measure(verdict)
+      IF: verdict == "Failing"
+      THEN: STOP AND SUGGEST "/design [area]" (Don't optimize broken systems)
+    ELSE: ASK_USER "Please run /measure [area] first."
+
+  STEP_2: # Identify Friction Points
+    FOR EACH user_note IN measure_report:
+      LOOKUP: pattern_id FROM self.data.refactor_map
+      MATCH: symptom TO user_friction
+      RECORD: active_friction_list
+
+  STEP_3: # Pareto Analysis
+    EVALUATE: all_actions USING (Effort, Impact, evidence)
+    CATEGORIZE:
+      high_impact: "Top 20% actions producing 80% results"
+      low_impact: "Remaining 80% with low 20% return"
+      negative_impact: "Actions causing harm/friction without gain"
+    RANK: c6_pareto
+
+  STEP_4: # System Refactoring
+    FOR EACH friction IN active_friction_list:
+      GET: fix_pattern AND refactor FROM self.data.refactor_map
+      PROPOSE: self.data
+      UPDATE: protocol_blueprint
+
+  STEP_5: # Automation Level Upgrade
+    CHECK: build_logs FOR stability_duration
+    IF: stability >= 14 days
+    THEN: 
+      GET: current_level FROM c4_build.ladder
+      CALCULATE: next_level = current_level + 1
+      SUGGEST: Automation upgrade_path FROM c4_build.build_map
+    ELSE: MAINTAIN current_level
+
+  STEP_6: # Final Report Generation
+    output_protocol:
+      GENERATE_MARKDOWN:
+        TEMPLATE "OPTIMIZE REPORT — [Area]" : |
+          ```markdown
+          OPTIMIZE REPORT — [Area]
+          Date: [YYYY-MM-DD]
+
+          SOURCE: out_measure_[area]_[date].md
+
+          FRICTION POINTS FOUND:
+            [list with type and evidence]
+
+          PARETO ANALYSIS:
+            Keep: [high-impact actions]
+            Cut: [low-impact actions]
+            Eliminate: [negative-impact actions]
+
+          CHANGES MADE:
+            [before → after for each refactoring]
+
+          AUTOMATION LEVEL:
+            Current: L[x]
+            Proposed: L[x+1] (if stable ≥14 days)
+            What changes: [description]
+
+          NEXT CYCLE: Run /perceive [area] to start a fresh diagnostic cycle
+          ```
+          |
+        SAVE_TO: "output/out_optimize_[area]_[YYYY-MMDD-HHMM].md"
+      UPDATE_LOG:
+        APPEND TO: "output/log_optimize_[area].csv"
+        COLUMNS: [Date, Bug, Fix, Metric, Value, Result, Note]
+
+# 3.0 KPI
+kpi_targets:
+  friction_reduction: "Subjective effort decrease reported by user"
+  action_count_ratio: "Post-optimize action count < Pre-optimize count"
+  win_rate_improvement: "Incremental increase in execution win rate"
+  automation_progression: "Movement up 1 ladder per 2 optimize cycle"
+
+# 4.0 TRANSITION
+transition_rule:
+  IF: optimization_complete
+  THEN: SUGGEST "/perceive [area] (Reset cycle for next iteration)" OR "level up 1"
+  ELSE: REPEAT STEP_4 (Refine refactors)

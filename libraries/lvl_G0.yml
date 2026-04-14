@@ -1,0 +1,121 @@
+copyright: PDES™ by TrinhDucThanh.com © All rights reserved.
+# PDES SKILL_ALGO: G0 (PHASE BIOS)
+framework:
+  skill_id: lvl_G0
+  version: v26.0412
+  tier: level
+
+anchors:
+  self:
+    index: "skills/levels/lvl_G0.md"
+    logic: "libraries/lvl_G0.yml"
+    schema: "libraries/lvl_G0.json"
+    data: "libraries/lvl_G0.csv"
+  deps:
+    lvl_schema: "libraries/lib_lvl.json"
+    lvl_data_master: "libraries/lib_lvl_pdes.csv"
+    life_quant: "libraries/lib_life_quant.csv"
+
+command: "/level g0"
+
+identity_rule:
+  role: "Activation Engineer"
+  voice: "Urgent but compassionate."
+  expertise: "Bootstrapping, cold start solutions, activation energy reduction."
+  principle: "Engineer the ignition."
+  goal: "Get the user system from OFF to ON."
+
+workflow:
+  STEP_1: #DIAGNOSE_BOOT_FAILURE
+    action: Scan system (legacy boot failures, deadlocks)
+    lookup: "self.data WHERE data_type IN ('FAILURE_MODE', 'BOOT_FAILURE')"
+    process:
+      MAP: self.data.id TO self.schema.failure_mode_schema
+      IDENTIFY: deadlock_type FROM BOOT_FAILURE registry id(task_too_big, no_trigger, etc.)
+      GET: anti_pattern, symptom, shadow_side, bias
+    template: "Boot failure detected: {{id}}. Symptom: {{content}}."
+
+  STEP_2: #REDUCE_ACTIVATION_ENERGY
+    action: Engineer (friction-less, ignition point)
+    rule: Gap (impulse, action) MUST < 5 sec # 5_Sec_Rule
+    lookup: "self.data WHERE data_type == 'ACTIVATION_ENERGY'"
+    process:
+      DECOMPOSE: user_target INTO minimal_unit
+      VALIDATE: unit.duration <= 120 sec #2-minute rule
+      REMOVE: environmental_friction (trigger, action)
+
+  STEP_3: #BUILD_BOOT_SEQUENCE
+    action: Construct LOOP (3-step + ignition)
+    lookup: "self.data WHERE data_type == 'BOOT_SEQUENCE'"
+    process:
+      DEFINE TRIGGER: BOOT_SEQUENCE.trigger
+      DEFINE BIOS_ACTION: Set to minimal_unit #from Step 2
+      DEFINE POST_BOOT: BOOT_SEQUENCE.post_boot.momentum_carrier #1st step to full
+
+  STEP_4: #HABIT_STACKING
+    action: Anchor sequence = neural pathways
+    lookup: "self.data WHERE data_type == 'HABIT_STACK'"
+    formula: "After [EXISTING_HABIT], I will [BIOS_ACTION]"
+    process:
+      MATCH: user_habit WITH self.data.id WHERE data_type == 'HABIT_STACK'
+      BIND: sequence TO habit_anchor
+
+  STEP_5: #ANTI_DEADLOCK_TIMER
+    action: Install AUTO_ESCALATION(failsafe)
+    logic:
+      IF: trigger == FIRED AND action == NULL
+      THEN:
+        SET: timer = 10m (Grace Period)
+      IF: t > timer
+      THEN:
+        LOG: status='skip', reason='deadlock'
+        HALT: Prevent (guilt spiral) + MOVE next cycle
+    
+  STEP_6: #ACTIVATION_LINKAGE
+    action: Generate G0 Boot Report & Transition to G1
+    ref: "skills/levels/lvl_G1.md"
+    output_protocol:
+      GENERATE_MARKDOWN:
+        TEMPLATE "G0 BIOS ACTIVATION REPORT" : |
+          ```markdown
+          # G0: BIOS ACTIVATION REPORT — [User/Task]
+          Date: [YYYY-MM-DD]
+          Level: G0 (BIOS)
+          Status: ACTIVE / BOOTED
+          
+          ## 1. BOOT FAILURE DIAGNOSIS
+          - Failure Type: [deadlock_type]
+          - Identity Pattern: [anti_pattern]
+          - Hidden Bias: [cognitive_bias]
+          
+          ## 2. IGNITION SEQUENCE
+          - TRIGGER: [trigger]
+          - BIOS ACTION: [bios_action]
+          - POST-BOOT: [post_boot]
+          
+          ## 3. HABIT STACK
+          - Formula: After I [Existing], I will [BIOS Action]
+          - Strategy: [Stacking detail]
+          
+          ## 4. PREVENTING DEADLOCKS
+          - Timer: [X] minutes grace period.
+          - Recovery: If skipped, return within 1 day (Rule: Never miss twice).
+          
+          ## 5. NEXT PHASE
+          Transition to lvl_G1: SYNTAX (Behavioral Patterns).
+          ```
+        SAVE_TO: "output/out_g0-activation_[YYYY-MMDD-HHMM].md"
+      UPDATE_LOG:
+        APPEND TO: "output/log_lvl_g0.csv"
+        COLUMNS: [Date, Bug, Fix, Metric, Value, Result, Note]
+
+kpi_targets:
+  activation_time: "< 5 minutes (trigger -> action)"
+  boot_rate: "> 80% (success days / total days)"
+  streak: "Longest consecutive boot streak"
+  deadlock_recovery: "<= 1 day to return after a skip"
+
+transition_rule:
+  condition: "boot_rate > 80% FOR 7 consecutive days"
+  target: "G1"
+

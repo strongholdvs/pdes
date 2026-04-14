@@ -1,0 +1,30 @@
+﻿data_type,kpi_id,content,meta_attr_1,metric_name,method,target_value
+Record Type,Unique Key ID,Content,Category,Metric Name,Measurement Method,Target Value
+CS Concept,,Variable,,,,
+System Design. PD Concept,,Variable Mapping. Dynamic Identity. Identity Flexibility,,,,
+System Engineer Workflow,,"Resource Allocation, Reframing, Type Conversion, ",,,,
+FAILURE_MODE,ANTI_PATTERN,Hard-coding Identity,Critical,,System Diagnostic,
+FAILURE_MODE,SYMPTOM,"Fixed mindset, rigid self-labeling, inability to adapt, rigid identity, fixed self-image",Human,,Symptom Observation,
+FAILURE_MODE,SHADOW,Identity Rigidity,Psychological,,Shadow Audit,
+FAILURE_MODE,BIAS,Labeling Bias,Cognitive,,Bias Detection,
+\,,,,,,
+IDENTITY_VAR,career,[current role/title],,,Inventory,
+IDENTITY_VAR,skills,"[skill1, skill2, ...]",,,Inventory,
+IDENTITY_VAR,beliefs,"[I am x, I can't y, I'm not z]",,,Inventory,
+IDENTITY_VAR,roles,[parent/partner/employee/creator/...],,,Inventory,
+IDENTITY_VAR,energy,[current level /10],,,Inventory,
+\,,,,,,
+REFRAME_RULE,bad_at_X,I haven't practiced X enough yet,Growth,,Logic Refactor,
+REFRAME_RULE,not_leader,I haven't led in this context yet,Growth,,Logic Refactor,
+REFRAME_RULE,always_fail,"I've failed at [specific], which means I tried",Growth,,Logic Refactor,
+REFRAME_RULE,just_me,That's been my default value — I can reassign,Growth,,Logic Refactor,
+\,,,,,,
+SUPPORT_FRAMEWORK,Growth_Mindset,,,,,
+SUPPORT_FRAMEWORK,MBTI,,,,,
+SUPPORT_FRAMEWORK,Big_Five,,,,,
+\,,,,,,
+OMTM,G2_NSM_FLEX,,,Type Flexibility,const beliefs converted to let,>= 1 / cycle
+KPI,G2_TradeOFF_Diver,,,Portfolio Diversification,,
+KPI,PORTFOLIO_BAL,,,Portfolio balance,No single role > 60%,Balanced
+KPI,REASSIGN_SUCC,,,Reassignment success,% 7-day experiment completion,> 70%
+KPI,LABEL_AWARE,,,Label awareness,Daily self-correction count,Active

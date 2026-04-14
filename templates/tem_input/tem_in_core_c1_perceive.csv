@@ -1,0 +1,10 @@
+Date,Category,Metric/unit,Value,Status,Note
+YYYY-MM-DD,Energy,Focus_Score/10,4,Warning,Crashed after lunch
+YYYY-MM-DD,Sleep,Duration/hr,5.5,Critical,Interrupted sleep
+YYYY-MM-DD,Nutrition,Calories/kcal,2200,Success,Hit macro targets
+,,Success_Count/days,[Number of successful attempts],,Past 30 days
+,,Failure_Count/days,[Number of failed attempts],,Past 30 days
+,,Current_Low_Point,[Describe the worst state reached],,Drawdown assessment
+,,Effort_Level/10,[1-10],,Input cost
+,,Result_Value/10,[1-10],,Output gain
+,,Last_Major_Bug,[Description],,Historical failure

@@ -1,0 +1,31 @@
+﻿data_type,kpi_id,content,meta_attr_1,metric_name,method,target_value
+Record Type,Unique Key ID,Content,Category,,Measurement Method,target_value
+CS Concept,,Null,,,,
+System Design. PD Concept,,System Initialization. Void Origin State,,,,
+System Engineer Workflow,,Root Cause Analysis (RCA),,,,
+FAILURE_MODE,ANTI_PATTERN,Null Pointer Exception / Cold Start Problem,Critical,,System Diagnostic,
+FAILURE_MODE,SYMPTOM,"Identity crisis, emptiness, lack of purpose, non-existence",Human,,Symptom Observation,
+FAILURE_MODE,SHADOW,"Nihilism - ""nothing matters anyway""",Psychological,,Shadow Audit,
+FAILURE_MODE,BIAS,Status Quo Bias - staying in null feels safer,Cognitive,,Bias Detection,
+\,,,,,,
+SUPPORT_FRAMEWORK,IKIGAI,"Love, Skill, Need, Paid",Alignment,,Framework Apply,
+SUPPORT_FRAMEWORK,WHEEL_OF_LIFE,Assess life domains to find the gap,Balance,,Framework Apply,
+SUPPORT_FRAMEWORK,HERO_JOURNEY,Identify Call to Adventure vs Refusal,Identity,,Framework Apply,
+\,,,,,,
+RESOURCE_MAP,Skills,What can you do (60-70%)?,Effectuation,,Resource Audit,
+RESOURCE_MAP,Knowledge,What do you know nhiều hơn average?,Effectuation,,Resource Audit,
+RESOURCE_MAP,Network,Who do you know?,Effectuation,,Connection Map,
+RESOURCE_MAP,Tools,What tools do you have?,Effectuation,,Asset List,
+RESOURCE_MAP,Experiences,What have you DONE?,Effectuation,,History Analysis,
+RESOURCE_MAP,Time,Available time slot?,Effectuation,,Schedule Audit,
+\,,,,,,
+PATTERN_QUERY,RECURRING_ACTIVITY,What activity do you return to?,Signal,,Pattern Search,
+PATTERN_QUERY,PROBLEM_SOLVER,What problems do you naturally solve?,Signal,,Pattern Search,
+PATTERN_QUERY,SOCIAL_ROLE,Natural role in groups?,Signal,,Pattern Search,
+PATTERN_QUERY,OTHERS_NEED,What do others come to you for?,Signal,,Pattern Search,
+\,,,,,,
+OMTM,Gz_NSM_Latency,,,Latency Action,,
+KPI,Gz_TradeOFF_OppCost,,,Opportunity Cost,Day count awareness vs action,Minimize
+KPI,VAR_ASSIGN,,,Variable Assignment,Non-null purpose string,Exists
+KPI,PAT_DET,,,Pattern Detection,User feedback,Articulated
+KPI,ACT_LNK,,,Activation Linkage,Proceed to G0,Transitioned

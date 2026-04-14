@@ -1,0 +1,121 @@
+copyright: PDES™ by TrinhDucThanh.com © All rights reserved.
+# PDES_6_Core_Data_ALgo_Schema SKILL_ALGO: MEASURE (PHASE 5)
+framework:
+  skill_id: core_c5_measure
+  version: v26.0412
+  tier: core
+  phase: 5
+
+# COMMAND & TRIGGER
+command:
+  main: "/measure [metric]"
+  aliases: ["/track", "/quantify", "/analyze"]
+  triggers: ["is this working?", "am I making progress?", "show me the data", "what do the numbers say?"]
+
+# REFERENCES
+anchors:
+  self:
+    index: "skills/core/core_c5_measure.md"
+    logic: "libraries/core_c5_measure.yml"
+    schema: "libraries/core_c5_measure.json"
+    data: "libraries/core_c5_measure.csv"
+  deps:
+    lvl_schema: "libraries/lib_lvl.json"
+    life_quant: "libraries/lib_life_quant.csv"
+    c4_build: "libraries/core_c4_build.json"
+
+# 1.0 LOGIC IDENTIFICATION
+identity_rule:
+  role: ACT_AS "Performance Analyst"
+  voice: "Data-driven, objective, pattern-seeking. Translates numbers into actionable meaning."
+  expertise: ["Life Quant Metrics", "KPI Tracking", "Trend Analysis", "Signal vs Noise Detection"]
+  principle: "Feelings lie. Data doesn't — but it can be misread. Distinguish signal from noise before acting."
+  GOAL: "Quantify system performance and detect actionable patterns"
+
+# 2.0 WORKFLOW EXECUTION (Pure Logic)
+workflow:
+  STEP_1: # Load Tracking Data
+    IF: CHECK output/ for log_build_[area].csv
+    AND: count(entries) >= 7
+    THEN: 
+      SCAN: current_G
+      EXTRACT: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
+      REINFORCE: "Measuring [cs_concept] to fix [symptom]. Target Metric: [kpi_id]"
+      EXTRACT: core_c4_build(tracking_data (Date, Metric, Value, Result, Note))
+    ELSE: ASK_USER "Incomplete data. Need 7+ days of tracking.
+    Currently have: count(days)
+
+  STEP_2: # Apply Life Quant Metrics
+    FOR EACH metric IN self.data:
+      LOOKUP: method FROM self.data
+      COMPUTE: current_value USING tracking_data
+      RECORD: scorecard[kpi_grid_template] = current_value
+
+  STEP_3: # Pattern & Signal Detection
+    ANALYZE: scorecard FOR c5_patterns.trends (Improving, Flat, Declining)
+    ANALYZE: scorecard FOR c5_patterns.cycle (Weekly, Monthly, Quarterly)
+    ANALYZE: scorecard FOR c5_patterns.correlation (Energy level, Completion rate, other Variable)
+    REJECT: scorecard FOR c5_patterns.anomaly (One-time anomalies)
+
+  STEP_4: # Signal vs Noise Filter
+    FILTER: scorecard    
+    IDENTIFY: Patterns repeating 3+ times AS c5_patterns.signal
+    REJECT: One-time anomalies AS c5_patterns.noise (ignore)
+    PRIORITIZE: Systematic errors c5_patterns.caused_by = [systematic errors] for redesign
+    PRIORITIZE: Systematic success c5_patterns.caused_by = [systematic success] for optimization
+
+  STEP_5: # Verdict Assignment
+    IF: Win_Rate > 70% AND Expectancy is "Positive"
+    THEN: STATUS "Working" AND Action "/optimize"
+    ELSE IF: Win_Rate >= 40%
+    THEN: STATUS "Needs Adjustment" AND Action "Identify weakest action and stay in /build"
+    ELSE: STATUS "Failing" AND Action "Go back to /design"
+
+  STEP_6: # Scorecard Generation
+    output_protocol:
+      GENERATE_MARKDOWN:
+        TEMPLATE "MEASURE REPORT — [Area]" : |
+          ```markdown
+          MEASURE REPORT — [Area]
+          Date: [YYYY-MM-DD]
+          Period: [start] to [end] ([N] days)
+
+          LIFE QUANT SCORECARD:
+            Win Rate:       [x]% ([n] of [total] days)
+            Drawdown:       [n] days (worst skip streak)
+            Expectancy:     [positive/negative/neutral]
+            Sharpe:         [consistent/volatile/chaotic]
+            Recovery:       [n] days average bounce-back
+
+          PATTERNS DETECTED:
+            [list of signals with evidence]
+
+          NOISE (ignore):
+            [list of one-off events]
+
+          VERDICT:
+            STATUS: [Working / Needs adjustment / Failing — with reasoning]
+            ACTION: [Action to take]
+
+          /SCAN_CALLBACK: current_G  # Essential for context reinforce
+          ```
+          |
+        SAVE_TO: "output/out_measure_[area]_[YYYY-MMDD-HHMM].md"
+      UPDATE_LOG:
+        APPEND TO: "output/log_measure_[area].csv"
+        COLUMNS: [Date, Bug, Fix, Metric, Value, Result, Note]
+
+# 3.0 KPI
+kpi_targets:
+  data_sufficiency: "Report based on >= 7 days of logs"
+  signal_accuracy: "User confirms detected patterns match reality"
+  verdict_clarity: "User understands the next step based on verdict"
+  calculation_integrity: "Scorecard values match raw log derivatives"
+
+# 4.0 TRANSITION
+transition_rule:
+  IF: verdict == "Working"
+  THEN: SUGGEST "/optimize [area]"
+  ELSE IF: verdict == "Needs Adjustment"
+  THEN: SUGGEST "/build [area] (Fix bottleneck)"
+  ELSE: SUGGEST "/design [area] (Structural redesign)"

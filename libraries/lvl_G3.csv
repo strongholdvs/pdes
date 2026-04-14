@@ -1,0 +1,35 @@
+﻿data_type,kpi_id,content,meta_attr_1,metric_name,method,target_value
+Record Type,Unique Key ID,Content,Category,Metric Name,Measurement Method,Target Value
+CS Concept,,Loops,,,,
+System Design. PD Concept,,Cycle Iteration. Feedback Cycles. Habit Stacking. Compound Growth,,,,
+System Engineer Workflow,,"Iteration, Recursion, Break Conditions, Feedback Loops (Closed-loop)",,,,
+FAILURE_MODE,ANTI_PATTERN,Infinite Loop,Critical,,System Diagnostic,
+FAILURE_MODE,SYMPTOM,"Ruminating thoughts, repetitive mistakes, burnout from grinding, bad habits",Human,,Symptom Observation,
+FAILURE_MODE,SHADOW,Compulsion,Psychological,,Shadow Audit,
+FAILURE_MODE,BIAS,Sunk Cost Fallacy,Cognitive,,Bias Detection,
+\,,,,,,
+LOOP_TYPE,FOR,Bounded loop (fixed count),Linear,,Inventory,
+LOOP_TYPE,WHILE,Conditional loop (checks state),Logic,,Inventory,
+LOOP_TYPE,INFINITE,while(true) - no exit,Danger,,Inventory,
+LOOP_TYPE,DO_WHILE,Act first then check,Action,,Inventory,
+\,,,,,,
+EXIT_STRATEGY,TIME_BOX,"""I allow myself [X] minutes, then STOP""",Break,,Logic Refactor,
+EXIT_STRATEGY,COUNTER,"""I do this max [N] times, then move on""",Break,,Logic Refactor,
+EXIT_STRATEGY,SUBSTITUTION,"""When [trigger], I do [alternative] instead""",Change,,Logic Refactor,
+EXIT_STRATEGY,ENVIRONMENT,"Remove the trigger entirely (delete app, change location)",Kill,,Logic Refactor,
+\,,,,,,
+CHECKPOINT_QUESTIONS,,Is this loop still serving me?,,,,
+CHECKPOINT_QUESTIONS,,"Is the output of this loop improving, flat, or declining?",,,,
+CHECKPOINT_QUESTIONS,,Is the effort worth the output? (Profit Factor),,,,
+CHECKPOINT_QUESTIONS,,"Should I continue, modify, or break this loop?",,,,
+CHECKPOINT_QUESTIONS,,Am I running this loop by choice or by compulsion?,,,,
+\,,,,,,
+SUPPORT_FRAMEWORK,Habit_Stacking,"After [EXISTING LOOP], I add [NEW ACTION].",,,,
+SUPPORT_FRAMEWORK,Pomodoro_meta_loop,"Work in 25-min loops with 5-min breaks. Every 4 loops (2h), take 15-30 min to evaluate. Built-in checkpoint system.",,,,
+SUPPORT_FRAMEWORK,Sunk_Cost_interven,I've been doing this for [time] → That time is gone regardless. The question is: Does the NEXT iteration of this loop add value? If no → break. The past iterations don't make the next one worth doing.,,,,
+\,,,,,,
+OMTM,G3_NSM_Cycle,,,Cycle Time,Avg iteration duration,Shorter
+KPI,G3_TradeOFF_Compound,,,Compound Frequency,,
+KPI,INF_LOOP_BROKEN,,,Infinite loops broken,Count of exit conditions installed,Active
+KPI,COMPOUND_STREAK,,,Compound streak,Consecutive daily executions,Max
+KPI,CHECKPOINT_COMPL,,,Checkpoint compliance,% scheduled evaluations done,> 90%

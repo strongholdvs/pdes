@@ -1,0 +1,52 @@
+{
+	"copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+	"title": "Build — Phase 4: Implementation & Execution",
+	"schema_version": "v26.0412",
+	"phase": 4,
+	"system_anchors": {
+		"self": {
+			"index": "skills/core/core_c4_build.md",
+			"logic": "libraries/core_c4_build.yml",
+			"schema": "libraries/core_c4_build.json",
+			"data": "libraries/core_c4_build.csv"
+		},
+		"deps": {
+			"lvl_schema": "libraries/lib_lvl.json",
+			"lvl_pdes": "libraries/lib_lvl_pdes.csv",
+			"life_quant": "libraries/lib_life_quant.csv",
+			"c3_design": "libraries/core_c3_design.json"
+		}
+	},
+	"c4_grid_template": {
+		"build_map": {
+			"ladder": "string",
+			"implementation_type": "string",
+			"environment_setup": "array",
+			"build_steps": "array",
+			"verification_method": "string",
+			"ladder_desc": "string"
+		}
+	},
+	"kpi_grid_template": {
+		"current_G": "string",
+		"kpi_id": "string",
+		"metric_name": "string",
+		"target_value": "string",
+		"method": "string",
+		"skill_ref": "string",
+		"category": "string"
+	},
+	"c4_implementation": {
+		"area": "string",
+		"environment": {
+			"tools_gather": "array",
+			"workspace_prep": "string",
+			"friction_clear": "string"
+		},
+		"process": {
+			"daily_actions": "array",
+			"tracking_mechanism": "string",
+			"review_cadence": "array"
+		}
+	}
+}
