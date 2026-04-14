@@ -1,0 +1,8 @@
+﻿category,structure_algorithm,operational_trigger,pdes_level_mapping,success_kpi
+Asset Type,Architecture/Method,Real-world Trigger,PDES Level Map,Success Metric
+Algorithm,Recursion,Self-Similarity/Habits,G3_Loops,Habit_Consistency
+Non-Linear,Tree,Decision Hierarchy,G5_Logic,Decision_Latency
+Linear,Queue,Task Scheduling,G9_Thread,Throughput_Rate
+Non-Linear,Graph,Networking/Connections,G11_Cloud,Node_Connectivity
+Algorithm,Binary_Search,Efficient Search,G14_Algorithms,Search_Steps_Count
+Linear,Stack,Undo/Redo Operations,G17_Locking,Recovery_Speed

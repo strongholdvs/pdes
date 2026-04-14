@@ -1,0 +1,8 @@
+Date,Action_Completed,Status,Energy_Level,Output_Value,Time_Spent_Min,Note
+YYYY-MM-DD,Full,Success,8,10,120,Great focus
+YYYY-MM-DD,Full,Success,7,8,110,Routine stable
+YYYY-MM-DD,Minimum,Warning,3,2,10,Very tired  used fallback
+YYYY-MM-DD,Skip,Failure,2,0,0,Burnout day
+YYYY-MM-DD,Full,Success,6,7,90,Back on track
+YYYY-MM-DD,Full,Success,7,9,100,Consistent
+YYYY-MM-DD,Full,Success,8,10,130,Peak performance

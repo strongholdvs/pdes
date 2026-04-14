@@ -1,0 +1,4 @@
+Date,Category,Action_Event,Value,Unit,Note,Status
+YYYY-MM-DD,Work,Deep Work Session,120,min,Focused on Library Build,Success
+YYYY-MM-DD,Health,Sleep Duration,6.5,hr,Woke up tired,Warning
+YYYY-MM-DD,Mind,Stress Level,7,1-10,High workload at 2PM,Critical

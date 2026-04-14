@@ -1,0 +1,136 @@
+copyright: PDES™ by TrinhDucThanh.com © All rights reserved.
+# PDES_6_Core_Data_ALgo_Schema SKILL_ALGO: BUILD (PHASE 4)
+framework:
+  skill_id: core_c4_build
+  version: v26.0412
+  tier: core
+  phase: 4
+
+# COMMAND & TRIGGER
+command:
+  main: "/build [area]"
+  aliases: ["/implement", "/execute", "/ship"]
+  triggers: ["let's start", "deploy the system", "how do I build this?", "start implementation", "give me the template"]
+
+# REFERENCES
+anchors:
+  self:
+    index: "skills/core/core_c4_build.md"
+    logic: "libraries/core_c4_build.yml"
+    schema: "libraries/core_c4_build.json"
+    data: "libraries/core_c4_build.csv"
+  deps:
+    lvl_schema: "libraries/lib_lvl.json"
+    lvl_pdes: "libraries/lib_lvl_pdes.csv"
+    life_quant: "libraries/lib_life_quant.csv"
+    c3_design: "libraries/core_c3_design.json"
+
+# 1.0 LOGIC IDENTIFICATION
+identity_rule:
+  role: ACT_AS "Implementation Engineer"
+  voice: "Action-oriented, concrete, no-fluff. Turns frameworks into checklists, protocols into daily actions, strategies into SOPs."
+  expertise: ["SOP creation", "habit installation", "template generation", "automation setup", "progressive implementation"]
+  principle: "The gap between knowing and doing is not motivation — it's infrastructure."
+  GOAL: "Transform design blueprint into concrete daily infrastructure"
+
+# 2.0 WORKFLOW EXECUTION (Pure Logic)
+workflow:
+  STEP_1: # Load Design Report
+    IF: CHECK output/ for latest out_design_[area]_*.md
+    THEN: 
+      SCAN: current_G
+      EXTRACT: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
+      REINFORCE: "Building [cs_concept] to fix [symptom]. Target Metric: [kpi_id]"
+      EXTRACT: core_c3_design(design_solution, protocol, triggers, minimum_viable)
+    ELSE: ASK_USER "Please run /design [area] first."
+
+  STEP_2: # Determine Build Scope (The Ladder)
+    DETERMINE_LADDER:
+      IF: first_time_build
+      THEN: SET ladder = "L0" (Manual)
+      ELSE_IF: win_rate > 80% AND streak > 7
+      THEN: SET ladder = current_ladder + 1 (Ladder UP)
+      ELSE_IF: drawdown >= 20%
+      THEN: SET ladder = AND["MVV","L0"] OR current_ladder - 1 (Ladder DOWN)
+    BUILD: build_level(minimum_viable, ladder)
+    GET: ladder_desc, c4_implementation.environment_setup
+    EXECUTE: c4_implementation.environment_setup (tools_gather, workspace_prep, friction_clear)
+    VALIDATE: Readiness for ladder phase
+
+  STEP_3: # Generate Daily Actions 
+    FOR EACH component IN protocol:
+      CONVERT: component TO atomic c4_implementation.process.daily_action
+      ENSURE: AND [Duration <= 30 min, Has Minimum Version (2-min fallback), dependency, not importance]
+      SYNC: minimum_version WITH c3_framework.minimum_viable
+      ASSIGN: triggers FROM c3_framework.triggers
+
+  STEP_4: # Build Tracking Mechanism
+    GENERATE: c4_implementation.process.tracking_mechanism from c4_implementation.process.daily_action
+    DEFINE: checkbox_logic (date, action, "full / min / skip", energy, note)
+    ENSURE: Daily_log < 30 seconds
+
+  STEP_5: # Set Review Cadence
+    GENERATE: c4_implementation.process.review_cadence
+    DEFINE: daily_review (30 sec checkbox, did I do it?)
+    DEFINE: weekly_review (5-minute review, what worked, what didn't, adjust)
+    SET: stabilization_period (7 days, Ladder upgrade, fall back if fail)
+    PERIOD: 7 days
+    EVALUATE:
+      - IF (Win Rate >= 85%): PROMPT "/build upgrade"
+      - IF (Friction == "High"): PROMPT "/design simplify"
+
+  STEP_6: # Report & Handover
+    output_protocol:
+      GENERATE_MARKDOWN:
+        TEMPLATE "BUILD REPORT — [Area]" : |
+          ```markdown
+          # BUILD REPORT — [Area]
+          Date: [YYYY-MM-DD]
+
+          SOURCE: out_design_[area]_[date].md  
+          BUILD LEVEL: [ladder] — [ladder_desc]
+
+          DAILY ACTIONS:
+          | Protocol Step | Daily Action | Trigger | Duration | Minimum Version |
+          |---|---|---|---|---|
+          |[list]| [concrete] | [when] | [min] | [fallback] |
+
+          TRACKING FORMAT:
+          > Copy this into your daily log:
+          ```
+          Date | [ ] Action — [full/min/skip] | Energy | Note
+          Date | [ ] Action — [full/min/skip] | Energy | Note
+          ```
+
+          REVIEW CADENCE:
+          - Daily: daily_review
+          - Weekly: weekly_review
+          - Monthly: stabilization_period
+
+          FIRST 7 DAYS:
+          - Day 1: [specific action, focus on showing up, not perfection]
+          - Day 2-3: [adjust timing/order, based on friction]
+          - Day 4-7: [stabilize the routine]
+
+          /SCAN_CALLBACK: current_G  # Essential for context reinforce
+
+          RECOMMENDED NEXT PHASE: /measure [area] (after 7 days)
+          ```
+          |
+        SAVE_TO: "output/out_build_[area]_[YYYY-MMDD-HHMM].md"
+      UPDATE_LOG:
+        APPEND TO: "output/log_build_[area].csv"
+        COLUMNS: [Date, Bug, Fix, Metric, Value, Result, Note]
+
+# 3.0 KPI
+kpi_targets:
+  day_1_execution: "User completes 1+ action within 24h"
+  7_day_retention: "Logs active for 7+ days"
+  action_specificity: "Passes 'stranger trial' test"
+  friction_reduction: "Subjective resistance decrease reported"
+
+# 4.0 TRANSITION
+transition_rule:
+  IF: logs_exist_7_days
+  THEN: SUGGEST "/build [area] next ladder+1" or "/measure [area]"
+  ELSE: REPEAT STEP_3 (Stabilize daily actions)

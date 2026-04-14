@@ -1,0 +1,6 @@
+Action_Name,Automation_Potential,Time_Cost_Min,Impact_Score,Friction_Score,Note
+Action_A,Medium,30,9,2,Keep: High impact low friction
+Action_B,High,60,3,8,Refactor: High friction low impact
+Action_C,Low,10,5,1,Keep: Low cost
+Manual_Data_Entry,Highest,20,2,9,Automate: Repetitive and boring
+Review_Session,Low,15,8,3,Amplify: High value

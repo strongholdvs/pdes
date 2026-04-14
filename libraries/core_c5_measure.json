@@ -1,0 +1,43 @@
+{
+	"copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+	"title": "Measure — Phase 5: Track & Quantify",
+	"schema_version": "v26.0412",
+	"phase": 5,
+	"system_anchors": {
+		"self": {
+			"index": "skills/core/core_c5_measure.md",
+			"logic": "libraries/core_c5_measure.yml",
+			"schema": "libraries/core_c5_measure.json",
+			"data": "libraries/core_c5_measure.csv"
+		},
+		"deps": {
+			"lvl_schema": "libraries/lib_lvl.json",
+			"life_quant": "libraries/lib_life_quant.csv",
+			"c4_build": "libraries/core_c4_build.json"
+		}
+	},
+	"kpi_grid_template": {
+		"current_G": "string",
+		"kpi_id": "string",
+		"metric_name": "string",
+		"target_value": "string",
+		"method": "string",
+		"skill_ref": "string",
+		"category": "string"
+	},
+	"c5_patterns": {
+		"pattern_id": "string",
+		"trend": "string",
+		"cycle": "string",
+		"correlation": "string",
+		"anomaly": "string",
+		"signal": "string",
+		"noise": "string",
+		"caused_by": "array"
+	},
+	"c5_verdict_rules": {
+		"status": "string",
+		"condition": "string",
+		"action": "string"
+	}
+}

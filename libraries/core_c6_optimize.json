@@ -1,0 +1,53 @@
+{
+	"copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+	"title": "Optimize — Phase 6: Debug & Refactor",
+	"schema_version": "v26.0412",
+	"phase": 6,
+	"system_anchors": {
+		"self": {
+			"index": "skills/core/core_c6_optimize.md",
+			"logic": "libraries/core_c6_optimize.yml",
+			"schema": "libraries/core_c6_optimize.json",
+			"data": "libraries/core_c6_optimize.csv"
+		},
+		"deps": {
+			"lvl_schema": "libraries/lib_lvl.json",
+			"life_quant": "libraries/lib_life_quant.csv",
+			"c5_measure": "libraries/core_c5_measure.json",
+			"c4_build": "libraries/core_c4_build.json"
+		}
+	},
+	"c6_grid_template": {
+		"G": "string",
+		"refactor_map": {
+			"friction_type": "string",
+			"cs_analogy": "string",
+			"symptom": "string",
+			"fix_pattern": "string",
+			"refactor": "string",
+			"before": "string",
+			"after": "string"
+		}
+	},
+	"kpi_grid_template": {
+		"current_G": "string",
+		"kpi_id": "string",
+		"metric_name": "string",
+		"target_value": "string",
+		"method": "string",
+		"skill_ref": "string",
+		"category": "string"
+	},
+	"c6_pareto": {
+		"evidence": "string",
+		"high_impact": "array",
+		"low_impact": "array",
+		"negative_impact": "array"
+	},
+	"c6_automation": {
+		"current_level": "string",
+		"stability_days": "number",
+		"next_level": "string",
+		"upgrade_path": "array"
+	}
+}

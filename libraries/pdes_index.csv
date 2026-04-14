@@ -1,0 +1,43 @@
+﻿tier,id,name,description,command
+desc,phase/lvl/niche,SKILL ID,Purpose of the skill,Execution Command
+core,c1,Perceive,Assess and diagnose current state,/perceive
+core,c2,Model,Map domain into system models,/model
+core,c3,Design,Create execution frameworks,/design
+core,c4,Build,Implement daily infrastructure,/build
+core,c5,Measure,Track Life Quant metrics,/measure
+core,c6,Optimize,Debug and refactor cycles,/optimize
+level,Gz,Null,"Purpose discovery, identity crisis",/level gz
+level,G0,BIOS,"Activation energy, procrastination",/level g0
+level,G1,Syntax,"Habits, communication patterns",/level g1
+level,G2,Variable,"Identity flexibility, growth mindset",/level g2
+level,G3,Loops,"Feedback cycles, habit stacking",/level g3
+level,G4,Memory,"Knowledge management, second brain",/level g4
+level,G5,Logic,"Decision-making, mental models, dp/da",/level g5
+level,G6,I/O,"Deep work, boundaries, throughput",/level g6
+level,G7,Object,"Goals, encapsulation, integrity",/level g7
+level,G8,Inherit,"Skill transfer, legacy patterns",/level g8
+level,G9,Thread,"Flow state, focus, parallel execution",/level g9
+level,G10,Virtual,"Shadow work, imposter syndrome",/level g10
+level,G11,Cloud,"Networks, mastermind groups, scaling",/level g11
+level,G12,Server,"Self-sovereignty, internal hosting",/level g12
+level,G13,Access,"Social capital, networking",/level g13
+level,G14,Algorithms,"80/20, optimization, efficiency",/level g14
+level,G15,Database,"Personal CRM, life dashboard",/level g15
+level,G16,Low-level,"Biohacking, body as hardware",/level g16
+level,G17,Locking,"Trauma release, letting go",/level g17
+level,G18,SuperCom,"High performance, mental throughput",/level g18
+level,G19,Compiler,"Integrity audit, value-action alignment",/level g19
+level,G20,Kernel,"Core values, discipline, stability",/level g20
+level,G21,Root,"Extreme ownership, self-mastery",/level g21
+level,G22,Quantum,"Paradox tolerance, antifragility",/level g22
+level,G23,Error,"Minimalism, detox, garbage collection",/level g23
+level,G24,Source,"First principles, reverse engineering",/level g24
+level,G25,Merge,"Life integration, unified self",/level g25
+level,G26,Encrypt,"Inner security, psychological safety",/level g26
+level,G27,Admin,"Exit strategies, letting go",/level g27
+level,G28,Hidden,"Stealth power, invisible mastery",/level g28
+level,G29,Anonymous,"Wu-wei, autonomous flow",/level g29
+level,G30,No Code,"Essentialism, effortless action",/level g30
+plugin,health,Health,Biohacking and Body system,/niche health
+plugin,content,Content,Repurposing and Lead Gen,/niche content
+plugin,trading,Trading,Investment Operating System,/niche trading

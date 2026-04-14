@@ -1,0 +1,71 @@
+{
+  "copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+  "title": "CS_DSA: Data Structures and Algorithms",
+  "schema_version": "v26.0412",
+  "system_anchors": {
+    "self": {
+      "index": "libraries/lib_cs_dsa.md",
+      "logic": "libraries/lib_cs_dsa.yml",
+      "schema": "libraries/lib_cs_dsa.json",
+      "data": "libraries/lib_cs_dsa.csv"
+    },
+    "deps": {}
+  },
+  "dsa_grid_template": {
+    "category": "string",
+    "structure_algorithm": "string",
+    "operational_trigger": "string",
+    "pdes_level_mapping": "string",
+    "success_kpi": "string"
+  },
+  "structures": {
+    "stack": {
+      "behavior": "LIFO",
+      "memory_allocation": "static_or_dynamic",
+      "best_case_scenario": "nested_logic_reversal",
+      "limitations": [
+        "overflow_risk",
+        "no_random_access"
+      ],
+      "related_concepts": [
+        "recursion",
+        "undo_mechanism"
+      ]
+    },
+    "queue": {
+      "behavior": "FIFO",
+      "memory_allocation": "dynamic",
+      "variants": [
+        "priority_queue",
+        "deque",
+        "circular_queue"
+      ],
+      "limitations": [
+        "traversal_cost"
+      ],
+      "related_concepts": [
+        "asynchronous_processing",
+        "buffering"
+      ]
+    },
+    "binary_search_tree": {
+      "behavior": "Hierarchical",
+      "properties": {
+        "is_ordered": true,
+        "max_children": 2
+      },
+      "traversal": [
+        "in_order",
+        "pre_order",
+        "post_order"
+      ],
+      "limitations": [
+        "unbalanced_performance_degradation"
+      ],
+      "related_concepts": [
+        "binary_search",
+        "heap"
+      ]
+    }
+  }
+}

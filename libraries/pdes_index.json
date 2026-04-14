@@ -1,0 +1,36 @@
+{
+	"copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+	"title": "PDES — System Index & Registry",
+	"schema_version": "v26.0412",
+	"phase": 0,
+	"system_anchors": {
+		"self": {
+			"index": "pdes_index.md",
+			"logic": "libraries/pdes_index.yml",
+			"schema": "libraries/pdes_index.json",
+			"data": "libraries/pdes_index.csv"
+		},
+		"deps": {
+			"lvl_schema": "libraries/lib_lvl.json",
+			"lvl_data_master": "libraries/lib_lvl_pdes.csv",
+			"life_quant": "libraries/lib_life_quant.csv"
+		}
+	},
+	"index_grid_template": {
+		"tier": "string",
+		"id": "string",
+		"name": "string",
+		"description": "string",
+		"command": "string"
+	},
+	"system_config": {
+		"name": "PDES — Personas Development Engine System",
+		"paths": {
+			"input": "input/",
+			"output": "output/",
+			"skills": "skills/",
+			"libraries": "libraries/",
+			"templates": "templates/"
+		}
+	}
+}

@@ -1,0 +1,12 @@
+﻿metric_name,method,target_value
+Life Quant Metric,How to Calculate,What It Measures
+Win Rate,Completed days / total days,% of days you executed the plan
+Drawdown,Longest consecutive skip/failure,Worst streak of missed days
+Risk/Reward,Hours spent / measurable result,Effort invested vs outcome gained
+Expectancy,(Win Rate * avg gain) - (Loss Rate * avg loss),"If you keep doing this, where do you end up?"
+Sharpe Ratio,Average progress / volatility of progress,Consistency of results
+Position Sizing,Hours on this / total available hours,How much of your time/energy goes here?
+Profit Factor,Total good outcomes / total bad outcomes,Gains vs losses ratio
+Max Favorable,Highest singleday output or longest streak,Best day/streak
+Recovery Factor,Days to return to routine after a skip / longest streak,How fast you bounce back from a miss
+Opportunity Cost,Time spent here vs alternative uses,What you're NOT doing because of this

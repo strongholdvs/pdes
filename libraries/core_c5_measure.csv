@@ -1,0 +1,32 @@
+﻿sklill_ref,kpi_id,metric_name,method,target_value
+core,desc,Metric Name,What it measures,Formular/Logic
+c5,win_rate,Execution percentage,Completed days / Total days,> 70%
+c5,drawdown,Worst skip streak,Longest consecutive failure/skip,< 3 days
+c5,risk_reward,Effort vs Outcome,Hours spent / Measurable gain,Positive Ratio
+c5,expectancy,Future trajectory,(WinRate * AvgGain) - (LossRate * AvgLoss),Positive Value
+c5,sharpe_ratio,Consistency score,Avg progress / Volatility progress,Stable trend
+c5,position_sizing,Energy allocation,Hours spent / Total hours available,Match priorities
+c5,profit_factor,Gains vs Losses,Total gains / Total losses,> 1.5
+c5,max_favorable,Best performance,Highest single-day output,New record
+c5,recovery_factor,Bounce-back speed,Days to return / Longest skip,< 1.0
+c5,opportunity_cost,Alternative loss,Time spent vs alternative,Low cost
+c1,,Diagnostic accuracy,Post-perceive user feedback,Pain points confirmed correct
+c1,,Coverage,Checklist completion,All components mapped (I/P/O/F + boundary)
+c1,,Time to diagnosis,Session timestamp,< 15 minutes per area
+c1,,Actionability,User proceeds to /model or /design,Clear next step identified
+c2,,Model accuracy,User confirmation feedback,Model reflects reality
+c2,,Component coverage,Checklist against perceive report,All major parts mapped
+c2,,Leverage point found,Count of leverage points,>=1 actionable point
+c2,,Clarity improvement,User self-assessment,User can explain system to others
+c3,,Executability,User feedback within 24h,Start immediately
+c3,,Completeness,Framework structure check,All 4 components present
+c3,,Constraint fit,Actual time/energy vs expected,Matches limits
+c3,,dp/da positive,Probability of success assessment,Actual effectiveness
+c4,,Day 1 execution,User confirms first action,Start within 24h
+c4,,7-day retention,Active logs for 7+ days,Persistent execution
+c4,,Action specificity,Every action is clear & concrete,"""Stranger trial"" test"
+c4,,Friction reduction,User reports lower resistance,Improving ease
+c6,,Friction Reduction,Subjective effort decrease,Positive
+c6,,Action Count,Fewer total actions for same result,Lower
+c6,,Win Rate Change,Next cycle measurement,Increasing
+c6,,Automation Progress,Quarterly ladder movement,Consistent

@@ -1,0 +1,6 @@
+Action_Step,Mastery,Friction_Level,Stability_Score,Note
+Trigger_Event,Manual,Low,8,How reliable is the start trigger (1-10)?
+Step_1_Execution,Checklist,Medium,5,Difficulty in performing the first move
+Tracking_Ease,Template,Low,9,How easy is it to mark 'Done'?
+Tool_Reliability,Semi-auto,Low,10,Is the tool/app always available?
+Environment_Ready,Routine,High,4,Is the physical space set up (1-10)?
