@@ -88,7 +88,6 @@ pdes/
 ## 📞 System Administrator
 Developed with precision by **Trịnh Đức Thành**.  
 🌐 [TrinhDucThanh.com](https://trinhducthanh.com)  
-📧 stronghold@trinhducthanh.com  
 💎 **Principles:** "The index is the map that enables navigation through the territory of self-optimization."
 
 ---
