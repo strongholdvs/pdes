@@ -19,7 +19,7 @@ tags:
 
 # PDES — Personas Development Engine System
 
-> **CS Logic × System Engineering × Personal Development × Agent**  
+> **CS Logic × System Engineering × Personal Development × Agentic intelligence**  
 > "Debug your life like you'd debug a system. Build infrastructure, not just motivation."
 
 ---
