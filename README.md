@@ -1,5 +1,5 @@
 # 🌌 PDES — Personas Development Engine System
-> **CS Logic × System Engineering × Personal Development × Agentic Intelligence**
+> **CS Logic × System Engineering × Personal Development × Agentic intelligence**
 
 [![Dual License: MIT & Proprietary](https://img.shields.io/badge/Dual--License-MIT--Proprietary-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Paid Level: G0-G30](https://img.shields.io/badge/Paid--Level-Gz--G30-blueviolet)](https://trinhducthanh.com)
@@ -12,7 +12,7 @@
 
 **PDES** is a high-performance framework that applies **Computer Science logic** and **System Engineering methodologies** to the complex multi-variable system of Human Development. It treats your reality as a modular state machine that can be perceived, modeled, designed, and optimized.
 
-**Meaning:** PDES ≈ PDEs (Partial Differential Equations) — modeling how complex multi-variable systems change over time. That's what this system does.
+**Meaning:** PDES ≈ PDEs (Partial Differential Equations) — modeling how complex dp/da multi-variable systems change over time. That's what this system does.
 
 **One-line simple:**  
 > Transform your life into a debuggable, optimizable system using the same logic that runs the world's most advanced software.

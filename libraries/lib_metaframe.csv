@@ -1,0 +1,28 @@
+n,orient,strategy,execute,content
+1,PURPOSE,VISION,North Star,Điểm đến cuối cùng; giá trị cốt lõi không thay đổi theo thời gian.
+2,PURPOSE,VISION,Ethos,Bản sắc và đặc tính tinh thần; các tiêu chuẩn hành vi trong hệ thống.
+3,PURPOSE,VISION,Goal,Các cột mốc trung hạn mang tính biểu tượng để hiện thực hóa tầm nhìn.
+4,PURPOSE,INTENT,Logic,Hệ thống lý luận để giải quyết vấn đề; tại sao chọn cách làm này mà không phải cách khác.
+5,PURPOSE,INTENT,Priority,Thứ tự ưu tiên dựa trên tầm quan trọng của giá trị thay vì sự khẩn cấp.
+6,PURPOSE,INTENT,Focus,Sự tập trung nguồn lực vào một điểm duy nhất để tạo đột phá trong hệ thống.
+7,PURPOSE,MAPPING,Context,Bối cảnh và môi trường xung quanh; xác định vị trí hiện tại trong hệ sinh thái.
+8,PURPOSE,MAPPING,Niche,Phân khúc chuyên biệt; nơi hệ thống tạo ra sự khác biệt lớn nhất so với phần còn lại.
+9,PURPOSE,MAPPING,Scale,Phạm vi và mức độ ảnh hưởng; khả năng mở rộng của hệ thống mà không làm mất bản sắc.
+10,CONSTRAINT,RESOURCE,Time,Quỹ thời gian hữu hạn; tài nguyên không thể tái tạo cần được quản trị chặt chẽ.
+11,CONSTRAINT,RESOURCE,Capital,Vốn tài chính và các tài sản hữu hình cần thiết để duy trì vận hành.
+12,CONSTRAINT,RESOURCE,Energy,Năng lượng sinh học và tinh thần; giới hạn về sức bền và sự minh mẫn.
+13,CONSTRAINT,FRICTION,Risk,Các biến số ngoài ý muốn; xác suất xảy ra các sự kiện gây tổn hại hệ thống.
+14,CONSTRAINT,FRICTION,Bottleneck,Điểm thắt nút cổ chai; nơi tốc độ của cả hệ thống bị giới hạn bởi một mắt xích yếu nhất.
+15,CONSTRAINT,FRICTION,Debt,Nợ kỹ thuật hoặc nợ kỹ năng; những thứ làm chậm hệ thống trong dài hạn nếu không trả.
+16,CONSTRAINT,GOVERNANCE,Protocol,Tập hợp các quy trình phản ứng tự động khi gặp các điều kiện kích hoạt cụ thể.
+17,CONSTRAINT,GOVERNANCE,Rule,Các quy định cứng; ranh giới đỏ không được phép vượt qua trong mọi trường hợp.
+18,CONSTRAINT,GOVERNANCE,Boundary,Giới hạn về phạm vi trách nhiệm và quyền hạn; điểm dừng để bảo vệ hệ thống.
+19,PIPELINE,SYSTEM,Infrastructure,Nền tảng vật lý hoặc số hóa; nơi chứa đựng và kết nối các thành phần.
+20,PIPELINE,SYSTEM,Tool,Các công cụ hỗ trợ cụ thể; gia tăng hiệu suất cho các tác vụ chuyên biệt.
+21,PIPELINE,SYSTEM,Data,Dữ liệu thô và cấu trúc thông tin; nhiên liệu cho quá trình xử lý của hệ thống.
+22,PIPELINE,WORKFLOW,Input,Các yêu cầu và nguyên liệu đầu vào được đưa vào quy trình xử lý.
+23,PIPELINE,WORKFLOW,Process,Thuật toán và các bước biến đổi dữ liệu/nguyên liệu thành sản phẩm.
+24,PIPELINE,WORKFLOW,Output,Kết quả thực tế sau xử lý; sản phẩm cuối cùng bàn giao cho người dùng/hệ thống sau.
+25,PIPELINE,EVOLUTION,Feedback,Dữ liệu phản hồi từ đầu ra; cơ sở để điều chỉnh các sai lệch của hệ thống.
+26,PIPELINE,EVOLUTION,Indicator,Các chỉ số đo lường (Metric/OMTM) để theo dõi sức khỏe và tốc độ tiến hóa.
+27,PIPELINE,EVOLUTION,Cross-Poll,Sự giao thoa và lai tạo kiến thức/kỹ năng giữa các Niche để tạo ra giá trị mới.

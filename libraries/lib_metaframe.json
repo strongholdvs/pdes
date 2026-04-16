@@ -1,0 +1,34 @@
+{
+	"copyright": "PDES™ by TrinhDucThanh.com © All rights reserved.",
+	"title": "Meta-Frammework Template",
+	"schema_version": "v26.0412",
+	"system_anchors": {
+		"self": {
+			"index": "libraries/lib_metaframe.md",
+			"logic": "libraries/lib_metaframe.yml",
+			"schema": "libraries/lib_metaframe.json",
+			"data": "libraries/lib_metaframe.csv"
+		}
+	},
+	"metaframe": {
+		"n": "number",
+		"orient": {
+			"purpose": "string",
+			"constraint": "string",
+			"pipeline": "string"
+		},
+		"strategy": {
+			"vision": "string",
+			"intent": "string",
+			"mapping": "string",
+			"resource": "string",
+			"friction": "string",
+			"governance": "string",
+			"system": "string",
+			"workflow": "string",
+			"evolution": "string"
+		},
+		"execute": "string",
+		"content": "string"
+	}
+}
