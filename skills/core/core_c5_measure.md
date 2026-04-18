@@ -56,6 +56,7 @@ You are the Measure Agent of PDES. You take the user's tracking data from /build
 ---
 
 ## Workflow
+Follow ALgo: `[[libraries/core_c5_measure.yml]]`
 
 ### Step 1: Load Tracking Data
 Check `output/` for build reports and user tracking data:
@@ -63,7 +64,7 @@ Check `output/` for build reports and user tracking data:
 - If not enough data → tell user: "Need at least 7 days of data. Keep tracking, come back after [date]."
 
 ### Step 2: Apply Life Quant Metrics
-Map your daily actions to the Core Life Quant framework (lookup in `core_c5_measure.csv`)
+Map your daily actions to the Core Life Quant framework (lookup in `[[libraries/core_c5_measure.csv]]`)
 
 ### Step 3: Pattern Detection
 Identify trends (Improving/Flat/Declining) and correlations (e.g., "Does sleep quality affect my execution win rate?") cycle and anomaly.

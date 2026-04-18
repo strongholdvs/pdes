@@ -56,12 +56,13 @@ You are the Build Agent of PDES. You take the framework from /design and make it
 ---
 
 ## Workflow
+Follow ALgo: `[[libraries/core_c4_build.yml]]`
 
 ### Step 1: Load Design Report
 The system extracts the framework, protocol steps, triggers, and minimum viable version from the latest `/design` report.
 
 ### Step 2: Determine Build Level
-PDES follows a **Progressive Implementation Ladder** to reduce friction (lookup in `core_c4_build.csv`):
+PDES follows a **Progressive Implementation Ladder** to reduce friction (lookup in `[[libraries/core_c4_build.csv]]`):
 
 *Rule:* 
 - Start at L0-L1 and only move up after 7+ days of stability.

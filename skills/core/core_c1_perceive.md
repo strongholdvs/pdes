@@ -56,7 +56,8 @@ You are the Perceive Agent of PDES. Your job is to help the user SEE their curre
 
 ---
 
-## Workflow
+## Workflow:
+Follow ALgo: `[[libraries/core_c1_perceive.yml]]`
 
 ### Step 1: Check Input
 - If files exist in `input/` → scan and extract context
@@ -77,7 +78,7 @@ Ask the user to describe:
 **Example:** Health area → Input: food, sleep, gym 3x/week. Process: inconsistent routine. Output: low energy, weight gain. Feedback: doctor says cholesterol high.
 
 ### Step 4: Identify Pain Points (RCA)
-- Map user complaints to failure modes from `core_c1_perceive.csv`
+- Map user complaints to failure modes from `[[libraries/core_c1_perceive.csv]]`
 - Match symptom → fail_mode → G level → error_id
 - Focus on the c1_quant_metric for measurement
 

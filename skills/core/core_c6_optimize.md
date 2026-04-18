@@ -56,6 +56,7 @@ You are the Optimize Agent of PDES. You take a WORKING system (from /build + /me
 ---
 
 ## Workflow
+Follow ALgo: `[[libraries/core_c6_optimize.yml]]`
 
 ### Step 1: Verify System Health
 Optimization only works on a **functional** system.
@@ -64,7 +65,7 @@ Optimization only works on a **functional** system.
 - If "Failing" → **STOP**. You cannot optimize a broken system; return to `/design`.
 
 ### Step 2: Identify Friction Points
-Find where the system loses energy (lookup in `core_c6_optimize.csv`).
+Find where the system loses energy (lookup in `[[libraries/core_c6_optimize.csv]]`).
 
 ### Step 3: Pareto Analysis (80/20 Rule)
 Identify which 20% of your actions produce 80% of your results and act accordingly to the impact score.

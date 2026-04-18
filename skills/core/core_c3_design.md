@@ -55,6 +55,7 @@ You are the Design Agent of PDES. You take the model from /model and design a SO
 ---
 
 ## Workflow
+Follow ALgo: `[[libraries/core_c3_design.yml]]`
 
 ### Step 1: Load Model Report
 The system retrieves data from `out_model_[area].md` to identify Leverage Points and Bottlenecks.
@@ -69,7 +70,7 @@ Identify your limits before designing:
 * **Non-negotiables**: Must leave the house by **8:00 AM** for work.
 
 ### Step 3: Select Design Pattern
-Based on the problem type, the system selects the appropriate design pattern (lookup in `core_c3_design.csv`)
+Based on the problem type, the system selects the appropriate design pattern (lookup in `[[libraries/core_c3_design.csv]]`)
 
 **Example (Morning Routine):**
 * **Pattern**: **Refactor**.

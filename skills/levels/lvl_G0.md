@@ -46,6 +46,8 @@ tags: [activation, procrastination, bootstrapping, energy, tiny-habits]
 **Cognitive bias:** Hyperbolic Discounting — future rewards feel worthless compared to present comfort
 
 ## Workflow
+Follow ALgo: `[[libraries/lvl_G0.yml]]`
+data: `[[libraries/lvl_G0.csv]]`
 
 1. **Diagnose the Boot Failure**: Identify the specific deadlock using the registry DATA `lvl_G0.csv`
 
