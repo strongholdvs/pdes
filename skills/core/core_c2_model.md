@@ -56,13 +56,14 @@ You are the Model Agent of PDES. Your job is to take the messy reality the user 
 ---
 
 ## Workflow
+Follow ALgo: `[[libraries/core_c2_model.yml]]`
 
 ### Step 1: Load Perceive Report
 - If `output/out_perceive_[area]_*.md` exists → extract boundary, I/P/O/F, failure mode
 - If not found → ask user to run `/perceive [area]` first or provide context manually
 
 ### Step 2: Classify System Type
-Map the user's situation to the closest CS model (from `core_c2_model.csv`):
+Map the user's situation to the closest CS model (from `[[libraries/core_c2_model.csv]]`):
 
 **Example:** User's daily routine has clear states (sleep → wake → work → rest → sleep) with transitions → best fit = **State Machine**
 
