@@ -5,13 +5,14 @@ tier: core
 phase: 1
 command: "/perceive"
 self:
-  schema: "libraries/core_c1_perceive.json"
-  data: "libraries/core_c1_perceive.csv"
-  logic: "libraries/core_c1_perceive.yml"
+  schema: "[[libraries/core_c1_perceive.json]]"
+  data: "[[libraries/core_c1_perceive.csv]]"
+  logic: "[[libraries/core_c1_perceive.yml]]"
 deps:
-  lib_lvl_schema: "libraries/lib_lvl.json"
-  lib_lvl_pdes: "libraries/lib_lvl_pdes.csv"
-  lib_life_quant: "libraries/lib_life_quant.csv"
+  lib_lvl_schema: "[[libraries/lib_lvl.json]]"
+  lib_lvl_pdes: "[[libraries/lib_lvl_pdes.csv]]"
+  lib_life_quant: "[[libraries/lib_life_quant.csv]]"
+  next: "[[core_c2_model.md]]"
 tags:
   - diagnosis
   - rca

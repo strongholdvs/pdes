@@ -5,12 +5,13 @@ tier: core
 phase: 3
 command: "/design"
 self:
-  schema: "libraries/core_c3_design.json"
-  data: "libraries/core_c3_design.csv"
-  logic: "libraries/core_c3_design.yml"
+  schema: "[[libraries/core_c3_design.json]]"
+  data: "[[libraries/core_c3_design.csv]]"
+  logic: "[[libraries/core_c3_design.yml]]"
 deps:
-  lib_life_quant: "libraries/lib_life_quant.csv"
-  core_c2_schema: "libraries/core_c2_model.json"
+  lib_life_quant: "[[libraries/lib_life_quant.csv]]"
+  core_c2_schema: "[[libraries/core_c2_model.json]]"
+  next: "[[core_c4_build.md]]"
 tags:
   - framework
   - strategy

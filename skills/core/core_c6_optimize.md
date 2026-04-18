@@ -5,12 +5,13 @@ tier: core
 phase: 6
 command: "/optimize"
 self:
-  schema: "libraries/core_c6_optimize.json"
-  data: "libraries/core_c6_optimize.csv"
-  logic: "libraries/core_c6_optimize.yml"
+  schema: "[[libraries/core_c6_optimize.json]]"
+  data: "[[libraries/core_c6_optimize.csv]]"
+  logic: "[[libraries/core_c6_optimize.yml]]"
 deps:
-  lib_life_quant: "libraries/lib_life_quant.csv"
-  core_c5_schema: "libraries/core_c5_measure.json"
+  lib_life_quant: "[[libraries/lib_life_quant.csv]]"
+  core_c5_schema: "[[libraries/core_c5_measure.json]]"
+  next: "[[core_c1_perceive.md]]"
 tags:
   - debugging
   - refactoring

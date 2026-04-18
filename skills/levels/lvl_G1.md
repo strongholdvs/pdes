@@ -6,9 +6,11 @@ level: G1
 cs_concept: "Syntax"
 command: "/level g1"
 self:
-  schema: "libraries/lvl_G1.json"
-  data: "libraries/lvl_G1.csv"
-  logic: "libraries/lvl_G1.yml"
+  schema: "[[libraries/lvl_G1.json]]"
+  data: "[[libraries/lvl_G1.csv]]"
+  logic: "[[libraries/lvl_G1.yml]]"
+deps:
+  next: "[[lvl_G2.md]]"
 tags: [habits, communication, patterns, syntax, signal-noise]
 ---
 

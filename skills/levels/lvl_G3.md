@@ -6,9 +6,11 @@ level: G3
 cs_concept: "Loops"
 command: "/level g3"
 self:
-  schema: "libraries/lvl_G3.json"
-  data: "libraries/lvl_G3.csv"
-  logic: "libraries/lvl_G3.yml"
+  schema: "[[libraries/lvl_G3.json]]"
+  data: "[[libraries/lvl_G3.csv]]"
+  logic: "[[libraries/lvl_G3.yml]]"
+deps:
+  next: "[[lvl_G4.md]]"
 tags: [loops, habits, feedback, compound, iteration, pomodoro, habit-stacking]
 ---
 

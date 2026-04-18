@@ -5,12 +5,13 @@ tier: core
 phase: 2
 command: "/model"
 self:
-  schema: "libraries/core_c2_model.json"
-  data: "libraries/core_c2_model.csv"
-  logic: "libraries/core_c2_model.yml"
+  schema: "[[libraries/core_c2_model.json]]"
+  data: "[[libraries/core_c2_model.csv]]"
+  logic: "[[libraries/core_c2_model.yml]]"
 deps:
-  lib_life_quant: "libraries/lib_life_quant.csv"
-  core_c1_schema: "libraries/core_c1_perceive.json"
+  lib_life_quant: "[[libraries/lib_life_quant.csv]]"
+  core_c1_schema: "[[libraries/core_c1_perceive.json]]"
+  next: "[[core_c3_design.md]]"
 tags:
   - system-mapping
   - state-machine

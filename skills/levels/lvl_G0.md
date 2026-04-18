@@ -6,9 +6,11 @@ level: G0
 cs_concept: "BIOS"
 command: "/level g0"
 self:
-  schema: "libraries/lvl_G0.json"
-  data: "libraries/lvl_G0.csv"
-  logic: "libraries/lvl_G0.yml"
+  schema: "[[libraries/lvl_G0.json]]"
+  data: "[[libraries/lvl_G0.csv]]"
+  logic: "[[libraries/lvl_G0.yml]]"
+deps:
+  next: "[[lvl_G1.md]]"
 tags: [activation, procrastination, bootstrapping, energy, tiny-habits]
 ---
 

@@ -118,4 +118,3 @@ kpi_targets:
 transition_rule:
   condition: "boot_rate > 80% FOR 7 consecutive days"
   target: "G1"
-
