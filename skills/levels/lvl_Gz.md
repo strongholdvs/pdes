@@ -6,9 +6,11 @@ level: Gz
 cs_concept: "Null"
 command: "/level gz"
 self:
-  schema: "libraries/lvl_Gz.json"
-  data: "libraries/lvl_Gz.csv"
-  logic: "libraries/lvl_Gz.yml"
+  schema: "[[libraries/lvl_Gz.json]]"
+  data: "[[libraries/lvl_Gz.csv]]"
+  logic: "[[libraries/lvl_Gz.yml]]"
+deps:
+  next: "[[lvl_G0.md]]"
 tags: [purpose, identity, rca, cold-start]
 ---
 

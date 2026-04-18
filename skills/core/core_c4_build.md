@@ -5,12 +5,13 @@ tier: core
 phase: 4
 command: "/build"
 self:
-  schema: "libraries/core_c4_build.json"
-  data: "libraries/core_c4_build.csv"
-  logic: "libraries/core_c4_build.yml"
+  schema: "[[libraries/core_c4_build.json]]"
+  data: "[[libraries/core_c4_build.csv]]"
+  logic: "[[libraries/core_c4_build.yml]]"
 deps:
-  lib_life_quant: "libraries/lib_life_quant.csv"
-  core_c3_schema: "libraries/core_c3_design.json"
+  lib_life_quant: "[[libraries/lib_life_quant.csv]]"
+  core_c3_schema: "[[libraries/core_c3_design.json]]"
+  next: "[[core_c5_measure.md]]"
 tags:
   - implementation
   - execution

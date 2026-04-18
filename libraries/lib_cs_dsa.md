@@ -4,9 +4,9 @@ title: "CS_DSA: Data Structures and Algorithms"
 tier: library
 cs_concept: DSA
 backend:
-  schema: "libraries/lib_cs_dsa.json"
-  data: "libraries/lib_cs_dsa.csv"
-  logic: "libraries/lib_cs_dsa.yml"
+  schema: "[[libraries/lib_cs_dsa.json]]"
+  data: "[[libraries/lib_cs_dsa.csv]]"
+  logic: "[[libraries/lib_cs_dsa.yml]]"
 tags: [data, structure, algorithm]
 ---
 

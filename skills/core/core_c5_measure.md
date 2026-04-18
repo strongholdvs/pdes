@@ -5,12 +5,13 @@ tier: core
 phase: 5
 command: "/measure"
 self:
-  schema: "libraries/core_c5_measure.json"
-  data: "libraries/core_c5_measure.csv"
-  logic: "libraries/core_c5_measure.yml"
+  schema: "[[libraries/core_c5_measure.json]]"
+  data: "[[libraries/core_c5_measure.csv]]"
+  logic: "[[libraries/core_c5_measure.yml]]"
 deps:
-  lib_life_quant: "libraries/lib_life_quant.csv"
-  core_c4_schema: "libraries/core_c4_build.json"
+  lib_life_quant: "[[libraries/lib_life_quant.csv]]"
+  core_c4_schema: "[[libraries/core_c4_build.json]]"
+  next: "[[core_c6_optimize.md]]"
 tags:
   - metrics
   - life-quant

@@ -6,9 +6,11 @@ level: G2
 cs_concept: "Variable"
 command: "/level g2"
 self:
-  schema: "libraries/lvl_G2.json"
-  data: "libraries/lvl_G2.csv"
-  logic: "libraries/lvl_G2.yml"
+  schema: "[[libraries/lvl_G2.json]]"
+  data: "[[libraries/lvl_G2.csv]]"
+  logic: "[[libraries/lvl_G2.yml]]"
+deps:
+  next: "[[lvl_G3.md]]"
 tags: [identity, growth-mindset, flexibility, roles, adaptation, neuroplasticity]
 ---
 
