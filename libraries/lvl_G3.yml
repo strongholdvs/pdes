@@ -77,11 +77,11 @@ workflow:
           Level: G3 (Loops)
           Status: ITERATION OPTIMIZED
           
-          ## 1. LOOP INVENTORY (Classification)
+          ## LOOP INVENTORY (Classification)
           - Good Loops: [Loop_List]
           - Infinite/Bad Loops: [Leak_List]
           
-          ## 2. BREAKING STUCK CYCLES (Exit Condition)
+          ## BREAKING STUCK CYCLES (Exit Condition)
           INFINITE LOOP: [description]
             Trigger: [what starts it]
             Current behavior: [what happens]
@@ -90,17 +90,17 @@ workflow:
           - New Exit Condition: [EXIT_STRATEGY]
           - Sunk Cost Check: [Acknowledged]
           
-          ## 3. COMPOUND GROWTH (Stacking)
+          ## COMPOUND GROWTH (Stacking)
           - Habit Stack: After [Habit], I will [Action]
           - Frequency: [Daily/Weekly]
 
-          ## 4. META-LOOP (Review Cadence)
+          ## META-LOOP (Review Cadence)
           - Daily loops → Review weekly
           - Weekly loops → Review monthly
           - [Pomodoro_meta_loop]
           - [CHECKPOINT_QUESTIONS] 
           
-          ## 5. NEXT PHASE
+          ## NEXT PHASE
           Transition to lvl_G4: MEMORY (Cognitive Storage).
         SAVE_TO: "output/out_g3-loops_[YYYY-MMDD-HHMM].md"
       UPDATE_LOG:

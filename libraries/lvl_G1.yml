@@ -80,16 +80,16 @@ workflow:
           Level: G1 (Syntax)
           Status: VALIDATION COMPLETE
           
-          ## 1. BEHAVIORAL AUDIT
+          ## BEHAVIORAL AUDIT
           - Pattern Detected: [Detected_Pattern]
           - Syntax Errors: [Error_List]
           - Mapping: [CS_Equivalent]
           
-          ## 2. EFFICIENCY METRICS
+          ## EFFICIENCY METRICS
           - Signal-to-Noise Ratio: [SNR]%
           - System State: [Healthy/Noisy/Critical]
           
-          ## 3. REFACTORING PLAN
+          ## REFACTORING PLAN
           - FIX: [specific behavioral change]
           - IMPLEMENTATION: [how to install the fix]
           - Method: [Atomic/NVC]
@@ -101,7 +101,7 @@ workflow:
             - Old syntax: "You never listen to me" (blame, absolute)
             - New syntax: "When [event], I feel [emotion], because I need [need]. Would you [request]?"
           
-          ## 4. NEXT PHASE
+          ## NEXT PHASE
           Transition to lvl_G2: VARIABLE (Dynamic Identity).
         SAVE_TO: "output/out_g1-syntax_[YYYY-MMDD-HHMM].md"
       UPDATE_LOG:

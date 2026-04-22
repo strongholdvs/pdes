@@ -83,25 +83,25 @@ workflow:
           Level: G0 (BIOS)
           Status: ACTIVE / BOOTED
           
-          ## 1. BOOT FAILURE DIAGNOSIS
+          ## BOOT FAILURE DIAGNOSIS
           - Failure Type: [deadlock_type]
           - Identity Pattern: [anti_pattern]
           - Hidden Bias: [cognitive_bias]
           
-          ## 2. IGNITION SEQUENCE
+          ## IGNITION SEQUENCE
           - TRIGGER: [trigger]
           - BIOS ACTION: [bios_action]
           - POST-BOOT: [post_boot]
           
-          ## 3. HABIT STACK
+          ## HABIT STACK
           - Formula: After I [Existing], I will [BIOS Action]
           - Strategy: [Stacking detail]
           
-          ## 4. PREVENTING DEADLOCKS
+          ## PREVENTING DEADLOCKS
           - Timer: [X] minutes grace period.
           - Recovery: If skipped, return within 1 day (Rule: Never miss twice).
           
-          ## 5. NEXT PHASE
+          ## NEXT PHASE
           Transition to lvl_G1: SYNTAX (Behavioral Patterns).
           ```
         SAVE_TO: "output/out_g0-activation_[YYYY-MMDD-HHMM].md"
