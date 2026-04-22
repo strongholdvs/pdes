@@ -72,24 +72,24 @@ workflow:
           Level: Gz (Null)
           Status: INITIALIZED
           
-          ## 1. DIAGNOSTIC SUMMARY
+          ## DIAGNOSTIC SUMMARY
           - Root Cause: [RCA Conclusion]
           - Anti-pattern: [Detected Failure Mode]
           - Cognitive Bias: [Detected Bias]
           
-          ## 2. RESOURCE INVENTORY (Effectuation)
+          ## RESOURCE INVENTORY (Effectuation)
           [Raw inventory of Skills, Network, Tools, Time]
           - Framework Alignment: [Ikigai/Wheel results]
           
-          ## 3. SIGNAL VS NOISE (Pattern Detection)
+          ## SIGNAL VS NOISE (Pattern Detection)
           - The Pattern: [The signal found in history]
           - The Noise: [Behaviors to discard]
           
-          ## 4. VARIABLE ASSIGNMENT (Initial Goal)
+          ## VARIABLE ASSIGNMENT (Initial Goal)
           - Purpose: let purpose = "I help [who] do [what] using [how]"
           - Identity: let identity = "I am someone who [pattern verb]"
           
-          ## 5. NEXT BOOT SEQUENCE
+          ## NEXT BOOT SEQUENCE
           Transition to lvl_G0: BOOT / ACTIVATION ENERGY.
           ```
           |

@@ -80,17 +80,17 @@ workflow:
           Level: G2 (Variable)
           Status: REASSIGNMENT ACTIVE
           
-          ## 1. IDENTITY INVENTORY (Variables)
+          ## IDENTITY INVENTORY (Variables)
           [let career = current_role]
           [let skills = inventory_skills]
           [let beliefs = inventory_beliefs]
           
-          ## 2. HARDCODED VS DYNAMIC (Detection)
+          ## HARDCODED VS DYNAMIC (Detection)
           | Hardcoded Belief | Evidence FOR | Evidence AGAINST | Verdict |
           |---|---|---|---|
           | Rigid Label | [user's evidence] | [Counter_Example] | [let_Reframed_Belief] |
 
-          ## 3. IDENTITY PORTFOLIO (Risk Management)
+          ## IDENTITY PORTFOLIO (Risk Management)
           - Current Allocation: [Allocation_List]
             [Role 1]: [x]% of identity  (e.g., "Employee: 80%")
             [Role 2]: [x]%               (e.g., "Parent: 15%")
@@ -101,7 +101,7 @@ workflow:
             [Role 2]: [x]%
             [New role]: [x]%
           
-          ## 4. PRACTICE REASSIGNMENT (7-day experiment)
+          ## PRACTICE REASSIGNMENT (7-day experiment)
           Pick ONE hardcoded belief to test GROWTH MINDSET REFRAMING: 
             const "[belief]" → let "[reframed version]"
           Daily action: 
