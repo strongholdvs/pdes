@@ -39,9 +39,9 @@ workflow:
     AND: count(entries) >= 7
     THEN: 
       SCAN: current_G
-      EXTRACT: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
+      EXTRACT_G: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
       REINFORCE: "Measuring [cs_concept] to fix [symptom]. Target Metric: [kpi_id]"
-      EXTRACT: core_c4_build(tracking_data (Date, Metric, Value, Result, Note))
+      EXTRACT_BUILD: core_c4_build(tracking_data (Date, Metric, Value, Result, Note))
     ELSE: ASK_USER "Incomplete data. Need 7+ days of tracking.
     Currently have: count(days)
 
@@ -52,24 +52,24 @@ workflow:
       RECORD: scorecard[kpi_grid_template] = current_value
 
   STEP_3: # Pattern & Signal Detection
-    ANALYZE: scorecard FOR c5_patterns.trends (Improving, Flat, Declining)
-    ANALYZE: scorecard FOR c5_patterns.cycle (Weekly, Monthly, Quarterly)
-    ANALYZE: scorecard FOR c5_patterns.correlation (Energy level, Completion rate, other Variable)
-    REJECT: scorecard FOR c5_patterns.anomaly (One-time anomalies)
+    ANALYZE_TRENDS: scorecard FOR c5_patterns.trends (Improving, Flat, Declining)
+    ANALYZE_CYCLE: scorecard FOR c5_patterns.cycle (Weekly, Monthly, Quarterly)
+    ANALYZE_CORRELATION: scorecard FOR c5_patterns.correlation (Energy level, Completion rate, other Variable)
+    REJECT_ANOMALY: scorecard FOR c5_patterns.anomaly (One-time anomalies)
 
   STEP_4: # Signal vs Noise Filter
     FILTER: scorecard    
     IDENTIFY: Patterns repeating 3+ times AS c5_patterns.signal
     REJECT: One-time anomalies AS c5_patterns.noise (ignore)
-    PRIORITIZE: Systematic errors c5_patterns.caused_by = [systematic errors] for redesign
-    PRIORITIZE: Systematic success c5_patterns.caused_by = [systematic success] for optimization
+    PRIORITIZE_ERROR: Systematic errors c5_patterns.caused_by = [systematic errors] for redesign
+    PRIORITIZE_SUCCESS: Systematic success c5_patterns.caused_by = [systematic success] for optimization
 
   STEP_5: # Verdict Assignment
     IF: Win_Rate > 70% AND Expectancy is "Positive"
     THEN: STATUS "Working" AND Action "/optimize"
-    ELSE IF: Win_Rate >= 40%
-    THEN: STATUS "Needs Adjustment" AND Action "Identify weakest action and stay in /build"
-    ELSE: STATUS "Failing" AND Action "Go back to /design"
+    ELSE_IF_ADJUST: Win_Rate >= 40%
+    THEN_ADJUST: STATUS "Needs Adjustment" AND Action "Identify weakest action and stay in /build"
+    ELSE_FAIL: STATUS "Failing" AND Action "Go back to /design"
 
   STEP_6: # Scorecard Generation
     output_protocol:
@@ -116,6 +116,6 @@ kpi_targets:
 transition_rule:
   IF: verdict == "Working"
   THEN: SUGGEST "/optimize [area]"
-  ELSE IF: verdict == "Needs Adjustment"
-  THEN: SUGGEST "/build [area] (Fix bottleneck)"
-  ELSE: SUGGEST "/design [area] (Structural redesign)"
+  ELSE_IF_ADJUST: verdict == "Needs Adjustment"
+  THEN_BUILD: SUGGEST "/build [area] (Fix bottleneck)"
+  ELSE_DESIGN: SUGGEST "/design [area] (Structural redesign)"

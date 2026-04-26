@@ -66,8 +66,8 @@ workflow:
       IF: trigger == FIRED AND action == NULL
       THEN:
         SET: timer = 10m (Grace Period)
-      IF: t > timer
-      THEN:
+      IF_10MIN: t > timer
+      THEN_SKIP:
         LOG: status='skip', reason='deadlock'
         HALT: Prevent (guilt spiral) + MOVE next cycle
     

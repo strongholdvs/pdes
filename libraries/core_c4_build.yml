@@ -39,19 +39,19 @@ workflow:
     IF: CHECK output/ for latest out_design_[area]_*.md
     THEN: 
       SCAN: current_G
-      EXTRACT: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
+      EXTRACT_G: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
       REINFORCE: "Building [cs_concept] to fix [symptom]. Target Metric: [kpi_id]"
-      EXTRACT: core_c3_design(design_solution, protocol, triggers, minimum_viable)
+      EXTRACT_DESIGN: core_c3_design(design_solution, protocol, triggers, minimum_viable)
     ELSE: ASK_USER "Please run /design [area] first."
 
   STEP_2: # Determine Build Scope (The Ladder)
     DETERMINE_LADDER:
       IF: first_time_build
       THEN: SET ladder = "L0" (Manual)
-      ELSE_IF: win_rate > 80% AND streak > 7
-      THEN: SET ladder = current_ladder + 1 (Ladder UP)
-      ELSE_IF: drawdown >= 20%
-      THEN: SET ladder = AND["MVV","L0"] OR current_ladder - 1 (Ladder DOWN)
+      ELSE_IF_UP: win_rate > 80% AND streak > 7
+      THEN_UP: SET ladder = current_ladder + 1 (Ladder UP)
+      ELSE_IF_DOWN: drawdown >= 20%
+      THEN_DOWN: SET ladder = AND["MVV","L0"] OR current_ladder - 1 (Ladder DOWN)
     BUILD: build_level(minimum_viable, ladder)
     GET: ladder_desc, c4_implementation.environment_setup
     EXECUTE: c4_implementation.environment_setup (tools_gather, workspace_prep, friction_clear)
@@ -71,8 +71,8 @@ workflow:
 
   STEP_5: # Set Review Cadence
     GENERATE: c4_implementation.process.review_cadence
-    DEFINE: daily_review (30 sec checkbox, did I do it?)
-    DEFINE: weekly_review (5-minute review, what worked, what didn't, adjust)
+    DEFINE_DAY: daily_review (30 sec checkbox, did I do it?)
+    DEFINE_WEEK: weekly_review (5-minute review, what worked, what didn't, adjust)
     SET: stabilization_period (7 days, Ladder upgrade, fall back if fail)
     PERIOD: 7 days
     EVALUATE:
