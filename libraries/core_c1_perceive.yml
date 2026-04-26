@@ -41,8 +41,8 @@ workflow:
 
   STEP_2: # SYSTEM BOUNDARY Modeling the Box
     DEFINE: current_scope[c1_area.boundary] 
-    IDENTIFY: current_scope.inside (Internal components)
-    IDENTIFY: current_scope.outside (Environmental dependencies)
+    IDENTIFY_IN: current_scope.inside (Internal components)
+    IDENTIFY_OUT: current_scope.outside (Environmental dependencies)
     ANALOGY: GET current_scope.cs_analogy (Module scope vs External API)
 
   STEP_3: # MAP CURRENT STATE 

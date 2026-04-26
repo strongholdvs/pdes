@@ -38,9 +38,9 @@ workflow:
     IF: CHECK output/ for latest out_measure_[area]_*.md
     THEN: 
       SCAN: current_G
-      EXTRACT: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
+      EXTRACT_G: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
       REINFORCE: "Optimizing [cs_concept] to fix [symptom]. Target Metric: [kpi_id]"
-      EXTRACT: core_c5_measure(verdict)
+      EXTRACT_MEASURE: core_c5_measure(verdict)
       IF: verdict == "Failing"
       THEN: STOP AND SUGGEST "/design [area]" (Don't optimize broken systems)
     ELSE: ASK_USER "Please run /measure [area] first."

@@ -40,9 +40,9 @@ workflow:
     IF: CHECK output/ for latest out_perceive_[area]_*.md
     THEN: 
       SCAN: current_G
-      EXTRACT: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
+      EXTRACT_G: (current_G, symptom, fail_mode, cs_concept, kpi_id, metric_name)
       REINFORCE: "Modeling [cs_concept] to fix [symptom]. Target Metric: [kpi_id]"
-      EXTRACT: core_c1_perceive(area, boundary, map)
+      EXTRACT_PERCEIVE: core_c1_perceive(area, boundary, map)
     ELSE: ASK_USER "Run /perceive [area] first" OR ACCEPT manual context
 
   STEP_2: # Classify System Type
@@ -61,8 +61,8 @@ workflow:
 
   STEP_4: # Build the Model
     LOOKUP: model_type IN c2_registry.c2_data
-    GET: draw_method FOR matched model_type
-    GET: components FOR matched model_type
+    GET_METHOD: draw_method FOR matched model_type
+    GET_COMPONENTS: components FOR matched model_type
     DECOMPOSE: user_system USING components(nodes, edges, constraints)
     EXECUTE: draw_method TO CREATE visual_textual_model
     VALIDATE: model WITH user (confirm structure matches reality)
