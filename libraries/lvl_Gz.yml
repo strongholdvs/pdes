@@ -36,7 +36,7 @@ workflow:
 
   STEP_2: #RCA
     action: TOOL FIND (cold start, ROOT CAUSE)
-    tool: RCA-5Whys
+    tool: RCA-5Wh
     objective: Break (Status Quo Bias) AND (Nihilism)
 
   STEP_3: #EFFECTUATION

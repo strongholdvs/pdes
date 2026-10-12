@@ -74,7 +74,7 @@ workflow:
     ref: "/level g2"
     output_protocol:
       GENERATE_MARKDOWN:
-        TEMPLATE "G1 SYNTAX VALIDATION REPORT" : |
+        TEMPLATE "G1 SYNTAX VALIDATION REPORT" : '
           # G1: SYNTAX VALIDATION REPORT — [User/Task]
           Date: [YYYY-MM-DD]
           Level: G1 (Syntax)
@@ -102,7 +102,7 @@ workflow:
             - New syntax: "When [event], I feel [emotion], because I need [need]. Would you [request]?"
           
           ## NEXT PHASE
-          Transition to lvl_G2: VARIABLE (Dynamic Identity).
+          Transition to lvl_G2: VARIABLE (Dynamic Identity).'
         SAVE_TO: "output/out_g1-syntax_[YYYY-MMDD-HHMM].md"
       UPDATE_LOG:
         APPEND TO: "output/log_lvl_g1.csv"

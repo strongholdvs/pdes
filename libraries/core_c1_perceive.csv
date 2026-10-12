@@ -15,7 +15,7 @@ z,Null,"Identity crisis, emptiness, lack of purpose, non-existence",Null Pointer
 11,Cloud,"Isolation, lack of support, limited resources, loneliness, disconnectedness",Network Partition,Groupthink,Bandwagon Effect,,Node Connectivity,,
 12,Server,"Needing/external validation, dependency, crash",Server Downtime,Dependency,Authority Bias,,Uptime Percentage,,
 13,Access,"Gatekeeping, low self-esteem, lack of access, arrogance, power struggle, over-stepping",Privilege Escalation,Arrogance,Dunning-Kruger,,Access Latency,,
-14,Algorithms,"Inefficiency, working hard but not smart, burnout",Big O(n^2) Inefficiency,Over-calculation,Gambler's Fallacy,,Big O Complexity,,
+14,Algorithms,"Inefficiency, working hard but not smart, burnout",Big O Inefficiency,Over-calculation,Gambler's Fallacy,,Big O Complexity,,
 15,Database,"Scattered life, lack of organization, chaos, misinformation, confusion",Data Corruption,Obsessive Control,Hindsight Bias,,Query Speed,,
 16,Low-level,"Health issues, physical decay, lack of basics, chronic illness, low energy",Hardware Failure,Physical Decay,Negativity Bias,,Bio-Latency,,
 17,Locking,"Analysis paralysis, stuck, in the past, stubbornness",Mutex Deadlock,Stubbornness,Loss Aversion,,Release Velocity,,
